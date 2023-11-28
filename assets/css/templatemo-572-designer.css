@@ -1128,7 +1128,7 @@ section.interior-design .right-content {
 
 @media (min-width: 992px) {
   section.interior-design .right-content {
-    margin-left: 50px;
+    /* margin-left: 50px; */
     margin-top: 0px;
   }
 }
@@ -1873,9 +1873,9 @@ section.contact-us-page .right-info ul li span {
   width: 18px;
   height: 18px;
   line-height: 18px;
-  margin: auto;
+  margin: 0 auto;
   position: absolute;
-  top: 0;
+  top: 53.5px;
   left: 0;
   bottom: 0;
   right: 0
@@ -1915,8 +1915,11 @@ section.contact-us-page .right-info ul li span {
 /* Horizontal Line for each time circle*/
 .main-timeline .date-content {
   width: 50%;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   float: left;
-  margin-top: 22px;
   position: relative;
 }
 
@@ -2026,7 +2029,7 @@ section.contact-us-page .right-info ul li span {
 
 .main-timeline .timeline-content {
   width: 50%;
-  padding: 20px 0 20px 50px;
+  padding: 20px 20px 20px 20px;
   float: right;
   text-align: center;
   box-shadow: 20px 20px 27px 0 rgb(0 0 0 / 5%);
@@ -2034,7 +2037,7 @@ section.contact-us-page .right-info ul li span {
 }
 
 .main-timeline .title {
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 700;
   line-height: 24px;
   margin: 0 0 15px 0;
@@ -2076,7 +2079,7 @@ section.contact-us-page .right-info ul li span {
 
 
 .main-timeline .timeline-content ul.description{
-  text-align: left;
+  text-align: justify;
   margin: 0px;
   list-style: disc;
 }
@@ -2084,6 +2087,7 @@ section.contact-us-page .right-info ul li span {
 .main-timeline .timeline-content ul.description li {
   font-size: 14px;
   margin-left: 25px;
+  margin-right: 25px;
   padding: 0px;
   line-height: 30px;
   display: list-item;
@@ -2104,7 +2108,7 @@ section.contact-us-page .right-info ul li span {
 }
 
 .main-timeline .timeline:nth-child(2n) .timeline-content {
-  padding: 20px 50px 20px 0;
+  padding: 20px 50px 20px 20px;
   text-align: right
 }
 
@@ -2189,6 +2193,21 @@ section.contact-us-page .right-info ul li span {
   }
 }
 
+.main-timeline .inline-link{
+  font-size: 14px;
+  color: #c51230;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.main-timeline .inline-link:hover{
+  font-size: 14px;
+  text-decoration: underline;
+  color: #ff565b;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
 
 /* About Me Education Badge Setting*/
 .card .degree-badge{
@@ -2296,4 +2315,36 @@ section.contact-us-page .right-info ul li span {
   color: #c51230;
   border-bottom: none;
   background-color: transparent;
+}
+
+/* Badges for skills and language*/
+/*c51230*/
+.skill-badge-base {
+  font-size: 15px;
+  color: #3b3b3b;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.skill-badge-1 {
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 7.5px;
+  background-color: #0d6efd;;
+}
+
+.skill-badge-2 {
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 7.5px;
+  background-color: #20ad6b;;
+}
+
+.skill-title {
+  font-size: 26px;
+  color: #000000;
+  font-weight: 500;
 }
