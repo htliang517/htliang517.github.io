@@ -47,7 +47,7 @@ ul li {
 }
 
 p {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 28px;
   text-align: justify;
   color: #7a7a7a;
@@ -121,7 +121,7 @@ section {
 
 @media (min-width: 576px) {
   section {
-    margin-top: 60px;
+    margin-top: 0px;
     padding-top: 60px;
   }
 }
@@ -133,7 +133,6 @@ section {
 .section-heading h2 {
   font-size: 22px;
   font-weight: 700;
-  text-transform: capitalize;
   color: #2a2a2a;
   line-height: 32px;
   letter-spacing: -0.5px;
@@ -731,12 +730,13 @@ section.whats-trending .right-image .thumb .hover-effect .inner-content span {
 
 section.whats-trending .right-image .thumb .hover-effect .inner-content span.work-badge {
   font-size: 16px;
+  border-radius: 12px;
   color: #ff565b;
   font-weight: 500;
   background-color: #ffffff;
   display: inline-block;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
   text-align: justify;
   -webkit-transform: translateX(30px);
   transform: translateX(30px);
@@ -1063,6 +1063,65 @@ footer .sub-footer a.scroll-to-top:hover {
   color: #ffffff;
 }
 
+/* Customed Page-banner for article*/
+.page-banner-intro {
+  background-color: #333;
+  background-image: url(../images/tech_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .page-banner-intro {
+    padding: 100px 0px;
+  }
+}
+
+.page-banner-intro h2 {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+  .page-banner-intro h2 {
+    font-size: 50px;
+  }
+}
+
+.page-banner-intro h2 em.project {
+  font-style: normal;
+  color: #f09800;
+}
+
+.page-banner-intro h2 em.research {
+  font-style: normal;
+  color: #d60303;
+}
+
+.page-banner-intro p {
+  color: #ffffff;
+}
+
+span.work-type-badge {
+  font-size: 16px;
+  color: #aa0006;
+  font-weight: 500;
+  background-color: #ffffff;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  border-radius: 12px;
+}
+/* ----- */
+
 .services {
   margin-top: -85px;
 }
@@ -1340,16 +1399,41 @@ section.interior-design .right-content .accordion-body span{
   }
 }
 
-section.explore-item h2 {
-  font-size: 34px;
-  font-weight: 700;
+section.explore-item h3 {
+  font-size: 36px;
+  font-weight: 600;
   color: #2a2a2a;
   text-align: center;
-  text-transform: uppercase;
+}
+
+section.explore-item h3 em {
+  color: #ff565b;
+  font-style: normal;
+  position: relative;
+}
+
+section.explore-item h4 {
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #636161;
+  text-align: center;
+}
+
+section.explore-item p {
+  font-size: 18px;
+}
+
+section.explore-item .main-image {
+  text-align: center;
 }
 
 section.explore-item .main-image img {
-  border-radius: 7.5px;
+  height: 50%;
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 15px;
 }
 
 section.explore-item .project-info {
@@ -1407,19 +1491,26 @@ section.explore-item img {
   }
 }
 
-section.explore-item .down-content h4 {
+section.explore-item .article-content h4 {
   margin-top: 50px;
   margin-bottom: 20px;
-  font-size: 34px;
+  font-size: 28px;
   font-weight: 700;
   color: #2a2a2a;
   text-align: left;
   text-transform: uppercase;
 }
 
+section.explore-item .article-content p {
+  /* font-size: 28px;
+  font-weight: 700; */
+  text-align: justify;
+  /* text-indent: 40px; */
+}
+
 section.explore-item .projects-pagination {
   border-top: 1px solid #eeeeee;
-  padding-top: 60px;
+  /* padding-top: 60px; */
 }
 
 section.explore-item .projects-pagination img {
@@ -1506,9 +1597,9 @@ section.explore-item .projects-pagination .left-content {
 section.explore-item .projects-pagination .left-content h6 {
   margin-top: 8px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
   color: #2a2a2a;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   -webkit-transition: all .5s;
   transition: all .5s;
   text-align: right;
