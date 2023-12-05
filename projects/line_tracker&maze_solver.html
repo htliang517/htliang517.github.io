@@ -120,139 +120,133 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="section-heading">
-                        <h3>Laboratory Management System</h3>
+                        <h3>Line <em>Tracker</em> & Maze <em>Solver</em></h3>
                         <h4>
                             # Keywords :
-                            <span class="badge work-type-badge border">Java</span>
-                            <span class="badge work-type-badge border">Apache Tomcat</span>
-                            <span class="badge work-type-badge border">Web Application</span>
-                            <span class="badge work-type-badge border">Server-side Programming</span>
+                            <span class="badge work-type-badge border">Robotics</span>
+                            <span class="badge work-type-badge border">Micro Controller Unit (MCU)</span>
+                            <span class="badge work-type-badge border">Mechatronics</span>
+                            <span class="badge work-type-badge border">Arduino</span>
+                            <span class="badge work-type-badge border">ATmega328p</span>
+                            <span class="badge work-type-badge border">Assembly</span>
                         </h4>
                     </div>
                     <div class="main-image">                   
-                        <img src="..\assets\images\works\projects\LabMS\main_pic.png" alt="master bedroom design">
+                        <img src="../assets/images/works/projects/line_tracker&maze_solver/MCU_robot.png" alt="MCU_Robot">
                     </div>
                 </div>
+                <!-- <div class="col-lg-6">
+                    <img src="assets/images/explore-item-02.jpg" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/images/explore-item-03.jpg" alt="">
+                </div> -->
                 <div class="col-lg-8 offset-lg-2">
                     <div class="article-content">
                         <p>
-                            This project is a term project of the course - Web Programming. 
-                            It is designed to emphasize a key learning objective: the comprehension and application of server-side programming.
-                            The project is a simple laboratory management system and its primary functionalities are:
-                            <br><br>
-                             > Borrow items <br>
-                             > Return items <br>
-                             > Reimburse expense 
-                            <br><br>
-                            The project ultilized Apache Tomcat with basic HTML &lt;form&gt;. 
-                            CSS was used for styling and JAVA classes were coded and defined for server side response.
-                            By putting my understanding of server-side programming into practice of building this laboratory management system, 
-                            I aim to not only meet the requirements of the course but also contribute a practical and valuable tool for the lab. 
+                            This project is a term project of the course - Principles and Applications of Microcontrollers.
                         </p>
                         <h4>Introduction</h4>
                         <p>
-                            In response to the challenges faced by our laboratory in managing data and members effectively 
-                            using the existing system built on Google Docs, Google Forms, and Google Sheets, the motivation behind this project was born.
-                            While the current system has served its purpose, its limitations in data organization and member management have become apparent. 
-                            Recognizing the need for a more tailored solution, 
-                            I endeavored to design a web application explicitly crafted to meet the unique demands of our laboratory.
-                            <br><br>
-                            This project aims to provide a robust alternative to the current system by introducing a web application that will be hosted on our lab's server. 
-                            By doing so, it might be able to overcome the difficulties associated with the current tools, 
-                            offering a more easy and efficient approach to data management and member coordination.
-                            
+                            #TODO
                         </p>
-                        <h4>Environment</h4>
+                        <h4>Approaches</h4>
                         <p>
-                            The whole system was developed under the following environment:
+                            <h6>Hardware Architecture</h6>
+                            The whole system is based on ROS and is composed of two machine: a rover and a remote computer.
+                            <h6>&gt; 1.Rover</h6>
+                            <p>
+                                The following figure 1. is the hardware architecture of the robot:
+                            </p>
                             <div class="col-sm-12">
-                                <table>
-                                    <tr>
-                                        <td>Operating System</td>
-                                        <td>Ubuntu 20.04</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Java JDK</td>
-                                        <td>Oracle OpenJDK version 11</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Web Container</td>
-                                        <td>Tomcat 10.0.17</td>
-                                    </tr>
-                                </table>
+                                <img src="../assets/images/works/projects/MLF-6110/robot_intro.png" alt="MLF6110 intro">
+                                <h5>Figure 1. Hardware architecture</h5>
                             </div>
+                            <p>
+                                Jetson Nano is the companion computer of the rover which deals with different signals from sensors.
+                                Multiple sensors were equipped on the rover.
+                                The RpLidar is a 2D, 360 degree lidar with a detecting range of 0.15 ~ 6 meters.
+                                A motor driver along with an IMU is equipped in the front of the rover.
+                                An RGB-D camera is also equipped on top of the rover to provide vision information.
+                            </p>
+                            <h6>&gt; 2.Remote Computer</h6>
+                            <p>
+                                The remote computer operates on Ubuntu, complemented by ROS. 
+                                Its primary responsibility lies in initializing the rover and provide GUI for users to locate objects.
+                                To operate real-time monitoring of the robot's status and environment, 
+                                Rviz is running on the remote computer employs, providing visualizations of the TF tree and the constructed map. 
+                                This visualization serves as a crucial role of examing the robot's movements and the evolving spatial awareness during its operations.
+                            </p>
                         </p>
-                        <h4>Functionalities</h4>
-                        <!-- <p></p> -->
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <p>
-                                    In order to access the full range of functionalities within our system, users are required to log in beforehand. 
-                                    To enhance the user experience, a "Remember Me" checkbox was designed during the login process. 
-                                    This feature is designed for the convenience of users who frequently access the system. 
-                                    When the "Remember Me" checkbox is selected during login, 
-                                    a cookie is generated, allowing the system to remember the user's authentication credentials.
-                                    The cookie would be expired in 7 days and users may now be directly directed to the main page without the need for login everytime. 
-                                </p>
-                            </div>
-                            <div class="col-lg-6 offset-lg-0 col-sm-8 offset-sm-2">
-                                <img src="../assets/images/works/projects/LabMS/login_page.png" alt="login_page">
-                                <h5>Figure 1. Login page</h5>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-4 offset-lg-0 col-sm-8 offset-sm-2">
-                                <img src="../assets/images/works/projects/LabMS/registration_page.png" alt="registration_page">
-                                <h5>Figure 2. Registration page</h5>
-                            </div>
-                            <div class="col-lg-7">
-                                <p>
-                                    <br>
-                                    For new lab members, there is no need to find the administrator to create new account for them.
-                                    All they have to do is to click on the "New User?" link on the bottom of the login page.
-                                    They will be directed to the registration page.
-                                    <br><br>
-                                    In the registration page, basic information must be provided to create a brand new account.
-                                    Once the "Register" button was clicked, the data would be stored in the server and the user may now login to use the system.
-                                </p>
-                            </div>
-                        </div>
                         <p>
-                            The following figure 3 shows all the functionalities of the system.
-                            Once the user was login, they will be directed to the main page.
-                            Four main button were on the page: (1) Borrow Item, (2) Return Item, (3) Reimburse Expense & (4) Logout.
+                            <h6>Software Architecture</h6>
+                            <br>
+                            <div class="col-sm-12">
+                                <img src="../assets/images/works/projects/MLF-6110/screenshot_of_remotePC.png" alt="'screenshot_of_remotePC">
+                                <h5>Figure 2. Screenshot of the remote computer. The left figure is the find object GUI using Find_object_2d. 
+                                    The right figure is the TF tree and constructed map displayed in Rviz.</h5>
+                            </div>
+                            Three main functionalities were needed to operate the system: mapping, navigation and object detection.
+                            <h6>&gt; 1.Mapping</h6>
+                            <p>
+                                To build a map for rover to navigate, SLAM is the key to accomplish the task.
+                                In our system, both lidar-based SLAM system or visual-based SLAM system may be a solution.
+                                Realsense camera is a RGB-D camera that is capable of providing both RGB image and depth information for visual SLAM system.
+                                The vSLAM system we originally used is RTAB-Map.
+                                RTAB-Map is a vSLAM algorithm which support RGB-D camera, Stereo camera and Lidar-based SLAM.
+                                However, due to the limiting power of the companion computer, RTAB-Map could not recieve as good result as running on a PC.
+                                Thus, GMapping is an alternative for us to finish the task. RpLidar is introduced and is then responsible for the mapping task.
+                            </p>
+                            <h6>&gt; 2.Navigation</h6>
+                            <p>
+                                After building a map with SLMA approaches, the move_base package is then be responsible for the navigation of the rover.
+                                The move_base package enable us to move a robot to desired positions by setting goal points.
+                                These goal points could be recieved with the help of the object detection system and SLAM system.
+                                We combine the two system together so that if a target object was detected, the current position and pose of the rover would be recorded.
+                                Users may now enter the desired target and the rover can move to the destination with the help of the move_base package.
+                            </p>
+                            <h6>&gt; 3.Object Detection</h6>
+                            <p>
+                                For object detection, we are using Find_object_2d.
+                                Find_object_2d is an integrated ROS package with various feature detectors and descriptors to choose.
+                                The package also provide a decent GUI for us to implement further functions.
+                                During the developping step, we had also tried YOLO as our detector.
+                                YOLO is a state-of-the-art, real-time object detection system. It is known for its speed and accuracy.
+                                However, due to the lack of enough dataset of target objects, we were not able to obtain a satisfied accuracy 
+                                and eventually dismissed the usage of YOLO.
+                            </p>
                         </p>
-                        <div class="col-sm-12">
-                            <img src="../assets/images/works/projects/LabMS/functionalities.jpg" alt="functionalities">
-                            <h5>Figure 3. All functionalities of the system. (a)Home page (b)Borrow form (c)Expense form (d) Return form</h5>
-                        </div>
-                        
+                        <h4>Results</h4>
                         <p>
-                            Three main functionalities of this system were accomplished by using HTML "&lt;form&gt;"" and CSS for styling. 
-                            Across all pages, the submit button is responsible for transmitting data to the server through the custom-designed <em>doPost()</em> method. 
-                            This approach ensures a consistent and secure data transfer mechanism compared with the <em>doGet()</em> method.
-                            Administrators have the privilege of logging in with the default admin account to see all stored data input by the users.
-                            Currently, all data were stored in a hash table in the server for convenience of setting up the system. 
-                            However, further improvement such as replacing hash table with relational databases such as mySQL or PostgreSQL 
-                            can significantly improve the security of data storage. Adding new functions such as managing account can increase the flexibility of use.
+                            The goal of our robot can be divided into three stages: manually mapping using Gmapping, automatically object
+                            location searching and user guiding with automatic navigation.
+                            <h6>&gt; Demo Video</h6>
+                            <div class="col-sm-12">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7asykichNb4?si=V8plVMtzQhQr2BRa" 
+                                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                                    </iframe>
+                                </div>
+
+                            </div>
                         </p>
-
-                        <!-- <h4>Demo</h4>
-                        <p>#TODO</p> -->
-
                         <h4>References</h4>
                         <p>
                             <table class="reference">
                                 <tr>
-                                    <td>- Apache Tomcat</td>
-                                    <td>: <a href="https://tomcat.apache.org/download-10.cgi" target="_blank"> https://tomcat.apache.org/download-10.cgi</a></td>
+                                    <td>- GMapping</td>
+                                    <td>: <a href="http://wiki.ros.org/gmapping" target="_blank"> http://wiki.ros.org/gmapping</a></td>
                                 </tr>
                                 <tr>
-                                    <td>- HTML & CSS Tutorial</td>
-                                    <td>: <a href="https://www.w3schools.com/html/" target="_blank"> https://www.w3schools.com/html/</a></td>
+                                    <td>- move_base</td>
+                                    <td>: <a href="http://wiki.ros.org/move_base" target="_blank"> http://wiki.ros.org/move_base</a></td>
+                                </tr>
+                                <tr>
+                                    <td>- Find_object_2d</td>
+                                    <td>: <a href="http://wiki.ros.org/find_object_2d" target="_blank"> http://wiki.ros.org/find_object_2d</a></td>
                                 </tr>
                             </table>
-                            
+                            &gt; [Note] For full report and code, please visit: <a href="" target="_blank">#_URL_TBD_</a>
                         </p>
                     </div>
                 </div>

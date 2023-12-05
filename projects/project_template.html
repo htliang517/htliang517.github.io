@@ -120,57 +120,19 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="section-heading">
-                        <h3>An <em>IMU Based</em> Dairy Cow Behavior Recognition System for Health Monitoring Using <em>Machine Learning</em></h3>
+                        <h3><em>M</em>obile <em>L</em>ost and <em>F</em>ound (<em>MLF</em>-6110)</h3>
                         <h4>
                             # Keywords :
-                            <span class="badge work-type-badge border">#TODO</span>
-                            <span class="badge work-type-badge border">#TODO</span>
-                            <span class="badge work-type-badge border">#TODO</span>
+                            <span class="badge work-type-badge border">Robotics</span>
+                            <span class="badge work-type-badge border">ROS</span>
+                            <span class="badge work-type-badge border">SLAM</span>
+                            <span class="badge work-type-badge border">Lidar</span>
+                            <span class="badge work-type-badge border">RGB-D Camera</span>
                         </h4>
                     </div>
                     <div class="main-image">                   
-                        <img src="../assets/images/interior-design-left-image.jpg" alt="master bedroom design">
+                        <img src="../assets/images/works/projects/MLF-6110/MLF6110.jpg" alt="Robot">
                     </div>
-                    <!-- <div class="project-info">
-                        <div class="row">
-                            <div class="col-lg-2">
-                                <div class="info-item">
-                                    <h6>Architect:</h6>
-                                    <span>Catherine Rose</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-2">
-                                <div class="info-item">
-                                    <h6>Client:</h6>
-                                    <span>TemplateMo</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-2">
-                                <div class="info-item">
-                                    <h6>Terms:</h6>
-                                    <span>6-12 Months</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-2">
-                                <div class="info-item">
-                                    <h6>Project Type:</h6>
-                                    <span>Interior Design</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-2">
-                                <div class="info-item">
-                                    <h6>Strategy:</h6>
-                                    <span>Clean &amp; Minimal</span>
-                                </div>
-                            </div>
-                            <div class="col-lg-2">
-                                <div class="info-item">
-                                    <h6>Date:</h6>
-                                    <span>January 22, 2022</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
                 <!-- <div class="col-lg-6">
                     <img src="assets/images/explore-item-02.jpg" alt="">
@@ -181,27 +143,117 @@
                 <div class="col-lg-8 offset-lg-2">
                     <div class="article-content">
                         <p>
-                            #TODO
+                            This project is the culmination of our work in the Robotics course, undertaken by a team of four members. 
+                            Our focus revolves around developing a mobile platform equipped with an RGB-D camera and lidar to aid people 
+                            in locating their lost belongings within confined spaces.
+                            The system also comes with an intuitive GUI and a command prompt for user to interact with.
                         </p>
                         <h4>Introduction</h4>
                         <p>
-                            #TODO
+                            SEARCHING is important!! According to statistics, we dedicate nearly 5,000 hours of our lives to finding things within our homes alone. 
+                            This number is likely to increase as our activities extend beyond our homes.
                             <br><br>
-                            #TODO
-                            <br><br>
-                            #TODO
+                            Remarkably, current commercial products fail to autonomously assist users in locating their belongings. 
+                            To address this gap, our project introduces a robot designed specifically for this purpose. 
+                            Our aim is to enhance the quality of daily living by offering an autonomous solution to the challenge of finding lost items.
                         </p>
                         <h4>Approaches</h4>
                         <p>
-                            #TODO
+                            <h6>Hardware Architecture</h6>
+                            The whole system is based on ROS and is composed of two machine: a rover and a remote computer.
+                            <h6>&gt; 1.Rover</h6>
+                            <p>
+                                The following figure 1. is the hardware architecture of the robot:
+                            </p>
+                            <div class="col-sm-12">
+                                <img src="../assets/images/works/projects/MLF-6110/robot_intro.png" alt="MLF6110 intro">
+                                <h5>Figure 1. Hardware architecture</h5>
+                            </div>
+                            <p>
+                                Jetson Nano is the companion computer of the rover which deals with different signals from sensors.
+                                Multiple sensors were equipped on the rover.
+                                The RpLidar is a 2D, 360 degree lidar with a detecting range of 0.15 ~ 6 meters.
+                                A motor driver along with an IMU is equipped in the front of the rover.
+                                An RGB-D camera is also equipped on top of the rover to provide vision information.
+                            </p>
+                            <h6>&gt; 2.Remote Computer</h6>
+                            <p>
+                                The remote computer operates on Ubuntu, complemented by ROS. 
+                                Its primary responsibility lies in initializing the rover and provide GUI for users to locate objects.
+                                To operate real-time monitoring of the robot's status and environment, 
+                                Rviz is running on the remote computer employs, providing visualizations of the TF tree and the constructed map. 
+                                This visualization serves as a crucial role of examing the robot's movements and the evolving spatial awareness during its operations.
+                            </p>
+                        </p>
+                        <p>
+                            <h6>Software Architecture</h6>
+                            <br>
+                            <div class="col-sm-12">
+                                <img src="../assets/images/works/projects/MLF-6110/screenshot_of_remotePC.png" alt="'screenshot_of_remotePC">
+                                <h5>Figure 2. Screenshot of the remote computer. The left figure is the find object GUI using Find_object_2d. 
+                                    The right figure is the TF tree and constructed map displayed in Rviz.</h5>
+                            </div>
+                            Three main functionalities were needed to operate the system: mapping, navigation and object detection.
+                            <h6>&gt; 1.Mapping</h6>
+                            <p>
+                                To build a map for rover to navigate, SLAM is the key to accomplish the task.
+                                In our system, both lidar-based SLAM system or visual-based SLAM system may be a solution.
+                                Realsense camera is a RGB-D camera that is capable of providing both RGB image and depth information for visual SLAM system.
+                                The vSLAM system we originally used is RTAB-Map.
+                                RTAB-Map is a vSLAM algorithm which support RGB-D camera, Stereo camera and Lidar-based SLAM.
+                                However, due to the limiting power of the companion computer, RTAB-Map could not recieve as good result as running on a PC.
+                                Thus, GMapping is an alternative for us to finish the task. RpLidar is introduced and is then responsible for the mapping task.
+                            </p>
+                            <h6>&gt; 2.Navigation</h6>
+                            <p>
+                                After building a map with SLMA approaches, the move_base package is then be responsible for the navigation of the rover.
+                                The move_base package enable us to move a robot to desired positions by setting goal points.
+                                These goal points could be recieved with the help of the object detection system and SLAM system.
+                                We combine the two system together so that if a target object was detected, the current position and pose of the rover would be recorded.
+                                Users may now enter the desired target and the rover can move to the destination with the help of the move_base package.
+                            </p>
+                            <h6>&gt; 3.Object Detection</h6>
+                            <p>
+                                For object detection, we are using Find_object_2d.
+                                Find_object_2d is an integrated ROS package with various feature detectors and descriptors to choose.
+                                The package also provide a decent GUI for us to implement further functions.
+                                During the developping step, we had also tried YOLO as our detector.
+                                YOLO is a state-of-the-art, real-time object detection system. It is known for its speed and accuracy.
+                                However, due to the lack of enough dataset of target objects, we were not able to obtain a satisfied accuracy 
+                                and eventually dismissed the usage of YOLO.
+                            </p>
                         </p>
                         <h4>Results</h4>
                         <p>
-                            #TODO
+                            The goal of our robot can be divided into three stages: manually mapping using Gmapping, automatically object
+                            location searching and user guiding with automatic navigation.
+                            <h6>&gt; Demo Video</h6>
+                            <div class="col-sm-12">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7asykichNb4?si=V8plVMtzQhQr2BRa" 
+                                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                                    </iframe>
+                                </div>
+
+                            </div>
                         </p>
                         <h4>References</h4>
                         <p>
-                            #TODO
+                            <table class="reference">
+                                <tr>
+                                    <td>- GMapping</td>
+                                    <td>: <a href="http://wiki.ros.org/gmapping" target="_blank"> http://wiki.ros.org/gmapping</a></td>
+                                </tr>
+                                <tr>
+                                    <td>- move_base</td>
+                                    <td>: <a href="http://wiki.ros.org/move_base" target="_blank"> http://wiki.ros.org/move_base</a></td>
+                                </tr>
+                                <tr>
+                                    <td>- Find_object_2d</td>
+                                    <td>: <a href="http://wiki.ros.org/find_object_2d" target="_blank"> http://wiki.ros.org/find_object_2d</a></td>
+                                </tr>
+                            </table>
+                            &gt; [Note] For full report and code, please visit: <a href="" target="_blank">#_URL_TBD_</a>
                         </p>
                     </div>
                 </div>
@@ -210,16 +262,10 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="left-pagination">
-                                    <!-- <img class="float-start" src="assets/images/pagination-left-image.jpg" alt="">
-                                    <div class="right-content">
-                                        <a href="explore.html"><h6>Minimalistic Living Room</h6></a>
-                                        <span>Interior Design</span>
-                                    </div> -->
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="right-pagination">
-                                    <!-- <img class="float-end" src="assets/images/pagination-right-image.jpg" alt=""> -->
                                     <div class="float-end left-content">
                                         <a href="../works.html">
                                             <h6>
@@ -230,7 +276,6 @@
                                                   </svg>
                                             </h6>
                                         </a>
-                                        <!-- <span>Interior Design</span> -->
                                     </div>
                                 </div>
                             </div>
