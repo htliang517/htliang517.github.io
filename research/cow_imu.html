@@ -129,7 +129,7 @@
                         </h4>
                     </div>
                     <div class="main-image">                   
-                        <img src="../assets/images/interior-design-left-image.jpg" alt="master bedroom design">
+                        <img src="../assets/images/works/research/cow_imu/DairyFarm&IMU.png" alt="DairyFarm&IMU">
                     </div>
                 </div>
                 <!-- <div class="col-lg-6">
@@ -139,7 +139,9 @@
                     <img src="assets/images/explore-item-03.jpg" alt="">
                 </div> -->
                 <div class="col-lg-8 offset-lg-2">
-                    <div class="article-content">
+                    <div class="article-content">                        
+                        <p class="note">[Note] This article is just a brief intro of the research. 
+                            For more detail, please refer to the full paper : <a href="http://dx.doi.org/10.13031/aim.202300400">Original Paper</a></p>
                         <p>
                             This research was corperated with ThroughTek (TUTK) and conducted under Professor Lin,Ta-Te.
                             In this research, we developed a dairy cow behavior recognition system to monitor dairy cows’ health status.
@@ -169,15 +171,64 @@
                         </p>
                         <h4>Approaches</h4>
                         <p>
-                            #TODO
+                            This research was conducted at the experimental dairy farm of National Taiwan University situated in Da'an Dist., Taipei City, Taiwan, R.O.C. 
+                            A total of six healthy Holstein-Friesian cows were selected to carry our IMU device. 
+                            Each cow was monitored in at least 12 continuous hours covering from day to night. 
+                            <br><br>
+                            The IMU device on the cows’ necks would transmit packed data into our database. 
+                            These data would then go through the window slicing steps to slice into appropriate ranges of data. 
+                            The selected data would then be processed under our proposed features. 
+                            Normalization of the features would be applied before they were input into the selected model. 
+                            The model would finally predict the behavior of the input data.
+                            Figure 1. shows the overall system workflow. There are three specific objectives of this research: 
+                            <br>
+                            &gt; To determine a suitable time window size and sampling frequency.<br>
+                            &gt; To design and select appropriate features.<br>
+                            &gt; To select appropriate machine learning algorithms.<br>
+                        </p>
+                        <div class="col-sm-8 offset-sm-2">
+                            <img src="../assets/images/works/research/cow_imu/SystemWorkflow.png" alt="System workflow">
+                            <h5>Figure 1. Overall workflow of the system. 
+                                This system includes four main steps: 
+                                collecting data, slicing window, extracting features and classifying and producing the seven behaviors. </h5>
+                        </div>
+                        <p>
+                            “Sampling frequency” refers to the rate at which the sensor data are collected and recorded by the device. 
+                            “Time window size” represents the amount of time or interval for which the IMU data are collected 
+                            and used to generate features that can be later used for behavior classification. 
+                            Five different sampling rates and seven different time window sizes were examined in this research.  
+                            As for the feature design, a total of 156 features containing both time and spectral domain were first proposed. 
+                            Three different feature selection method were then applied to eliminate unnecessary features. 
+                            For the determination of machine learning models, three different algorithms were applied.
                         </p>
                         <h4>Results</h4>
-                        <p>
-                            #TODO
-                        </p>
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <p>
+                                    In this research, an IMU-based dairy cow behavior recognition system was proposed. 
+                                    Different sampling frequencies were tested and there was no significant difference in model performance. 
+                                    Thus, we suggested that 5Hz of sampling frequencies was sufficient in this task. 
+                                    For time window size with fixed 5Hz sampling frequency, 
+                                    the larger the time window size set, the higher the performance of the system we obtained. 
+                                    The best performance we obtained was by setting the window size to be 30 seconds. 
+                                    For feature design, a total of 57 features selected by three different scoring method were introduced in this task.  
+                                    As for the model selection, we concluded that except for SVM, both XGBoost and Random Forest may be good enough for this task.
+                                </p>
+                            </div>
+                            <div class="col-sm-5">
+                                <img src="../assets/images/works/research/cow_imu/ModelComparison.png" alt="ModelComparison">
+                                <h5>Figure 2. Comparison of the overall F1 score</h5>
+                            </div>
+                        </div>
+                            
                         <h4>Publication</h4>
                         <p>
-                           - Full paper : <a href="http://dx.doi.org/10.13031/aim.202300400"> http://dx.doi.org/10.13031/aim.202300400</a>
+                           [Conference Paper]
+                           <br>
+                           <a href="http://dx.doi.org/10.13031/aim.202300400" target="_blank" class="inline-link"> 
+                            Liang, H.T., Hsu, S.W., Hsu,J.T., Tu,C.J., Chang,Y.C., Chua T.J., Lin,T.T. 2023. 
+                            An IMU based dairy cow behavior recognition system for health monitoring using machine learning. 
+                            2023 ASABE Annual International Meeting. Omaha, U.S.A. https://doi.org/10.13031/aim.202300400 </a>
                         </p>
                     </div>
                 </div>
@@ -274,7 +325,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/hieric517" target="_blank">
+                                <a href="https://github.com/htliang517" target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-github" viewBox="0 0 16 16">
                                         <path

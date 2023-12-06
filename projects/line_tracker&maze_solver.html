@@ -128,7 +128,7 @@
                             <span class="badge work-type-badge border">Mechatronics</span>
                             <span class="badge work-type-badge border">Arduino</span>
                             <span class="badge work-type-badge border">ATmega328p</span>
-                            <span class="badge work-type-badge border">Assembly</span>
+                            <span class="badge work-type-badge border">Embeded-C</span>
                         </h4>
                     </div>
                     <div class="main-image">                   
@@ -144,110 +144,124 @@
                 <div class="col-lg-8 offset-lg-2">
                     <div class="article-content">
                         <p>
-                            This project is a term project of the course - Principles and Applications of Microcontrollers.
+                            This project serves as the term project for the course "Principles and Applications of Microcontrollers".
+                            The primary objective is to apply and reinforce the knowledge and skills acquired in implementing AVR microcontrollers during the course.
+                            The project encompasses two main stages: the line-tracker and the maze-solver. 
+                            Both stages are using the same robot car with different sensors equipped on it.
                         </p>
                         <h4>Introduction</h4>
                         <p>
-                            #TODO
+                            <h6>&gt; Robot Car</h6>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <p>
+                                        The design of the robot car used in the whole competition are the same for each team.
+                                        However, each team possess the flexibility to choose what sensors they are using.
+                                        The main microcontroller we are using during the competition is ATmega328p inserted on the breadboard.
+                                        Arduino is working as the ISP (In-System Programming) helping us to flash our embeded-C code into ATmega328p in a convinient way.
+                                        Multiple sensors are also equipped on the car.
+                                        A DMS sensor is attached on the upper front layer providing the distance information for the robot to navigate in the maze.
+                                        Three IR sensors are attached on the bottom layer facing the ground.
+                                        These IR sensors are used for tracking the black line during line tracking.
+                                        An additional ultrasonic sensor is also available to add on the robot car for every team.
+                                        We, however, decided not to add it since using a DMS sensor is sufficient to finish the task.
+                                        The following figure 2. is the simplified wiring diagram of the robot car.
+                                    </p>
+                                </div>
+                                <div class="col-sm-3 offset-sm-1">
+                                    <img src="../assets/images/works/projects/line_tracker&maze_solver/MCU_robot.jpg" alt="Robot Car">
+                                    <h5>Figure 1. Robot car</h5>
+                                </div>
+                                <div class="col-sm-8 offset-sm-2">
+                                    <img src="../assets/images/works/projects/line_tracker&maze_solver/wiring.png" alt="Wiring">
+                                    <h5>Figure 2. Simplified wiring diagram</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <h6>&gt; Line Tracker</h6>
+                                    <p>
+                                        Figure 3. shows the competition venue of the line tracker. 
+                                    </p>
+                                    <img src="../assets/images/works/projects/line_tracker&maze_solver/line_tracker_court.png" alt="line-tracker-cort">
+                                    <h5>Figure 3. Line tracker competition venue </h5>
+                                    <p>
+                                        Commencing from the designated start line, the robot autonomously navigates through the entire route.
+                                        Running out of the route or taking shortcuts are prohibitted in the task.
+                                        Any such violation will cause the robot car to return to the start and start again.
+                                        The timer will not be reset during the competition.
+                                        All teams are allotted a maximum of 2 minutes for each attempt. 
+                                        Teams are scored based on the time taken to complete the rout.
+                                        Spending less time results in a higher score. 
+                                    </p>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <h6>&gt; Maze Solver</h6>
+                                    <p>
+                                        Figure 4. shows the competition venue of the maze solver.
+                                    </p>
+                                    <img src="../assets/images/works/projects/line_tracker&maze_solver/maze_solver_court.png" alt="line-tracker-cort">
+                                    <h5>Figure 4. Maze solver competition venue </h5>
+                                    <p>
+                                        The venue of the maze is surrounded by walls higher than the height of the robot.
+                                        The robot car would enter a small door and starts to navigate to the exit of the maze autonomously.
+                                        If the robot is stucked in the maze, reseting the robot and start from the start line is acceptable.
+                                        The timer, however, will not be reset during the competition.
+                                        Same as the line tracker competition, all teams are allotted a maximum of 2 minutes for each attempt. 
+                                    </p>
+                                </div>
+                            </div>
                         </p>
                         <h4>Approaches</h4>
                         <p>
-                            <h6>Hardware Architecture</h6>
-                            The whole system is based on ROS and is composed of two machine: a rover and a remote computer.
-                            <h6>&gt; 1.Rover</h6>
+                            <h6>&gt; Line Tracker</h6>
                             <p>
-                                The following figure 1. is the hardware architecture of the robot:
-                            </p>
-                            <div class="col-sm-12">
-                                <img src="../assets/images/works/projects/MLF-6110/robot_intro.png" alt="MLF6110 intro">
-                                <h5>Figure 1. Hardware architecture</h5>
-                            </div>
-                            <p>
-                                Jetson Nano is the companion computer of the rover which deals with different signals from sensors.
-                                Multiple sensors were equipped on the rover.
-                                The RpLidar is a 2D, 360 degree lidar with a detecting range of 0.15 ~ 6 meters.
-                                A motor driver along with an IMU is equipped in the front of the rover.
-                                An RGB-D camera is also equipped on top of the rover to provide vision information.
-                            </p>
-                            <h6>&gt; 2.Remote Computer</h6>
-                            <p>
-                                The remote computer operates on Ubuntu, complemented by ROS. 
-                                Its primary responsibility lies in initializing the rover and provide GUI for users to locate objects.
-                                To operate real-time monitoring of the robot's status and environment, 
-                                Rviz is running on the remote computer employs, providing visualizations of the TF tree and the constructed map. 
-                                This visualization serves as a crucial role of examing the robot's movements and the evolving spatial awareness during its operations.
+                                We uses three IR sensors for monitoring the route of the robot car. 
+                                When the middle IR sensor registers the highest value, the robot moves forward at full speed. 
+                                If the right IR sensor detects a higher value, the robot adjusts its trajectory by slowing the right wheel and speeding up the left wheel. 
+                                Conversely, when the left IR sensor detects a higher value, the robot adjusts by slowing the left wheel and accelerating the right wheel. 
+                                This method ensuresthe robot to correctly navigate along the black line.
+                                PID control was also implemented in the task.
+                                However, we discovered that, in this competition, using PD control is sufficient and better than using PID control.
                             </p>
                         </p>
                         <p>
-                            <h6>Software Architecture</h6>
-                            <br>
-                            <div class="col-sm-12">
-                                <img src="../assets/images/works/projects/MLF-6110/screenshot_of_remotePC.png" alt="'screenshot_of_remotePC">
-                                <h5>Figure 2. Screenshot of the remote computer. The left figure is the find object GUI using Find_object_2d. 
-                                    The right figure is the TF tree and constructed map displayed in Rviz.</h5>
-                            </div>
-                            Three main functionalities were needed to operate the system: mapping, navigation and object detection.
-                            <h6>&gt; 1.Mapping</h6>
+                            <h6>&gt; Maze Solver</h6>
                             <p>
-                                To build a map for rover to navigate, SLAM is the key to accomplish the task.
-                                In our system, both lidar-based SLAM system or visual-based SLAM system may be a solution.
-                                Realsense camera is a RGB-D camera that is capable of providing both RGB image and depth information for visual SLAM system.
-                                The vSLAM system we originally used is RTAB-Map.
-                                RTAB-Map is a vSLAM algorithm which support RGB-D camera, Stereo camera and Lidar-based SLAM.
-                                However, due to the limiting power of the companion computer, RTAB-Map could not recieve as good result as running on a PC.
-                                Thus, GMapping is an alternative for us to finish the task. RpLidar is introduced and is then responsible for the mapping task.
-                            </p>
-                            <h6>&gt; 2.Navigation</h6>
-                            <p>
-                                After building a map with SLMA approaches, the move_base package is then be responsible for the navigation of the rover.
-                                The move_base package enable us to move a robot to desired positions by setting goal points.
-                                These goal points could be recieved with the help of the object detection system and SLAM system.
-                                We combine the two system together so that if a target object was detected, the current position and pose of the rover would be recorded.
-                                Users may now enter the desired target and the rover can move to the destination with the help of the move_base package.
-                            </p>
-                            <h6>&gt; 3.Object Detection</h6>
-                            <p>
-                                For object detection, we are using Find_object_2d.
-                                Find_object_2d is an integrated ROS package with various feature detectors and descriptors to choose.
-                                The package also provide a decent GUI for us to implement further functions.
-                                During the developping step, we had also tried YOLO as our detector.
-                                YOLO is a state-of-the-art, real-time object detection system. It is known for its speed and accuracy.
-                                However, due to the lack of enough dataset of target objects, we were not able to obtain a satisfied accuracy 
-                                and eventually dismissed the usage of YOLO.
+                                According to the maze shape, one of the solution is to equipped both DMS sensor and ultrasonic sensor on the front and right of the robot.
+                                The robot could then navigate along the right wall util it reaches the exit.
+                                Nonetheless, after testing, we discovered that the voltage of the alkaline battery could drop as the battery usage time increases
+                                causing the sensing value of DMS sensor and the pwm of the motor to change.
+                                This problem could then cause the algorithm failed.
+                                In order to deal with this problem, an alternative algorithm is designed.
+                                After entering the maze, the machine continuously moves in a fan-shaped pattern towards a particular direction. 
+                                When it encounters a wall or obstacle, it reverses for a short distance and then continues moving in a fan-shaped pattern with different radius.
+                                This process repeats until the entire vehicle successfully navigates its way out of the maze.
+                                By using this method, the robot could successfully exit the maze on its own.
                             </p>
                         </p>
                         <h4>Results</h4>
                         <p>
-                            The goal of our robot can be divided into three stages: manually mapping using Gmapping, automatically object
-                            location searching and user guiding with automatic navigation.
-                            <h6>&gt; Demo Video</h6>
-                            <div class="col-sm-12">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7asykichNb4?si=V8plVMtzQhQr2BRa" 
-                                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-                                    </iframe>
-                                </div>
-
-                            </div>
+                            The final score of the whole competition is average by the two stages.
+                            With many efforts, we eventually obtain 4th place among the 25 teams which is an acceptable result.
                         </p>
-                        <h4>References</h4>
+                        <!-- <h4>References</h4>
                         <p>
                             <table class="reference">
                                 <tr>
-                                    <td>- GMapping</td>
-                                    <td>: <a href="http://wiki.ros.org/gmapping" target="_blank"> http://wiki.ros.org/gmapping</a></td>
+                                    <td>- </td>
+                                    <td>: <a href="" target="_blank"> </a></td>
                                 </tr>
                                 <tr>
-                                    <td>- move_base</td>
-                                    <td>: <a href="http://wiki.ros.org/move_base" target="_blank"> http://wiki.ros.org/move_base</a></td>
+                                    <td>- </td>
+                                    <td>: <a href="" target="_blank"> </a></td>
                                 </tr>
                                 <tr>
-                                    <td>- Find_object_2d</td>
-                                    <td>: <a href="http://wiki.ros.org/find_object_2d" target="_blank"> http://wiki.ros.org/find_object_2d</a></td>
+                                    <td>- </td>
+                                    <td>: <a href="" target="_blank"> </a></td>
                                 </tr>
                             </table>
-                            &gt; [Note] For full report and code, please visit: <a href="" target="_blank">#_URL_TBD_</a>
-                        </p>
+                        </p> -->
                     </div>
                 </div>
                 <div class="col-lg-12">
@@ -342,7 +356,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/hieric517" target="_blank">
+                                <a href="https://github.com/htliang517" target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-github" viewBox="0 0 16 16">
                                         <path

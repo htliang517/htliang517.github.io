@@ -102,10 +102,12 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="header-text">
                         <h2>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
-                                <path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"/>
-                                <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"/>
-                              </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                                class="bi bi-compass" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                            </svg>
                             <em class="research">Research</em> Project
                         </h2>
                     </div>
@@ -120,16 +122,21 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="section-heading">
-                        <h3>An <em>IMU Based</em> Dairy Cow Behavior Recognition System for Health Monitoring Using <em>Machine Learning</em></h3>
+                        <h3><em>Autonomous Navigation Control</em> of Multi-Rotor Unmanned Aerial Vehicle in Greenhouse
+                        </h3>
                         <h4>
                             # Keywords :
-                            <span class="badge work-type-badge border">Machine Learning</span>
-                            <span class="badge work-type-badge border">IoT</span>
-                            <span class="badge work-type-badge border">PostgreSQL</span>
+                            <span class="badge work-type-badge border">Robotics</span>
+                            <span class="badge work-type-badge border">ROS</span>
+                            <span class="badge work-type-badge border">Visual SLAM</span>
+                            <span class="badge work-type-badge border">RTAB-Map</span>
+                            <span class="badge work-type-badge border">YOLO</span>
+                            <span class="badge work-type-badge border">Deep SORT</span>
+                            <span class="badge work-type-badge border">PX4</span>
                         </h4>
                     </div>
-                    <div class="main-image">                   
-                        <img src="../assets/images/interior-design-left-image.jpg" alt="master bedroom design">
+                    <div class="main-image col-sm-8 offset-sm-2">
+                        <img src="../assets/images/works/research/uav_nav/drone.jpg" alt="Uav Navigation">
                     </div>
                 </div>
                 <!-- <div class="col-lg-6">
@@ -141,35 +148,46 @@
                 <div class="col-lg-8 offset-lg-2">
                     <div class="article-content">
                         <p>
-                            This research was corperated with ThroughTek (TUTK) and conducted under Professor Lin,Ta-Te.
-                            In this research, we developed a dairy cow behavior recognition system to monitor dairy cows’ health status.
-                            A total of six main behaviors were classified and the results were then send to a web server for farmers to examine.
+                            In recent years, the widespread use of unmanned aerial vehicles (UAVs) in various fields has
+                            been hampered by challenges in indoor navigation due to satellite signal masking. This
+                            research focuses on developing an indoor autonomous navigation system for UAVs, utilizing a
+                            Visual SLAM algorithm instead of traditional Wi-Fi-based triangulation. Built on ROS Noetic
+                            with Ubuntu 20.04, our system employs RTAB-Map and ROS move_base for navigation, along with
+                            YOLOv4 and Deep SORT for flower detection and counting. By addressing the limitations of
+                            traditional methods, we aim to facilitate UAV applications in greenhouse operations with
+                            enhanced precision and reduced technical barriers.
+                            <br><br>
+                            This research was my bachelor thesis conducted under Professor Lin,Ta-Te.
+                            It had also received a fellowship for undergraduate research from the Ministry of Science
+                            and Technology.
                         </p>
                         <h4>Introduction</h4>
                         <p>
-                            The health care of dairy cows is essential for dairy farms to ensure milk yield. 
-                            Therefore, building up a health monitoring system can significantly lower the maintenance cost and workload. 
-                            With cow behavior recognition, the health status of dairy cows can be monitored. 
-                            <br><br>
-                            In this research, we developed a dairy cow behavior recognition system to monitor dairy cows‘ health status. 
-                            Six main behaviors were classified: lying, standing, walking, drinking, feeding and ruminating. 
-                            For data collection, a 9-axis inertial measurement unit (IMU) was equipped on each cow to continuously collect raw motion data. 
-                            Our IMU device would then send the raw data through the internet to our backend computer for further analysis. 
-                            <br><br>
-                            To label the IMU data for dairy cow behavior recognition, 
-                            four cameras with different angles were set up in the experimental dairy farm to simultaneously record videos of different cows. 
-                            All behavior types were then labeled manually into the IMU data by watching the recorded video. 
-                            These IMU data were then processed and used to build the behavior recognition model. 
-                            <br><br>
-                            Four data processing steps were included in this research: 
-                            selecting different window sizes, feature extraction, features selection, and normalization. 
-                            Various model structures including SVM, Random Forest and XGBoost were also tested to yield the best model for recognizing cow behaviors. 
-                            The behavior recognition results could be further analyzed for health status monitoring, 
-                            such as low ruminating time or long lying time that could be utilized for estrus detection or calving.
+                            With the rapid progress in science and technology, unmanned aerial vehicles (UAVs) find
+                            extensive applications across diverse sectors. In the mining industry, UAVs play a pivotal
+                            role in tasks such as 3D mapping of mine environments, ore control, rock discontinuity
+                            mapping, post-blast rock fragmentation measurements, and tailing stability monitoring.
+                            Similarly, in agriculture, UAVs are commonly utilized for efficient pesticide spraying over
+                            large areas. While modern UAVs rely on global positioning systems (GPS) for positioning and
+                            route planning, challenges arise in indoor environments due to signal masking, leading to
+                            localization deviations. Addressing this, the research focuses on developing an indoor
+                            autonomous navigation system for UAVs, aiming to create a simulation system for automatic
+                            mapping and route planning.
                         </p>
                         <h4>Approaches</h4>
                         <p>
-                            #TODO
+                            Traditional method of indoor navigation for UAVs is triangulation. 
+                            This method estimates the position of UAV based on the Wi-Fi signal strengths transmitted from different Wi-Fi routers.
+                            Thus, multiple Wi-Fi devices is needed. The reason for not using triangulation in this study is that 
+                            this method requires multiple routers to be set up indoors 
+                            which not only increases the trouble for farmers to use but also raise the cost of installation and maintenance in the future.
+                            Therefore, compared with traditional methods of indoor navigation, we use Visual SLAM algorithm for UAV autonomous navigation in this research. 
+                            The VSLAM system used in this research is RTAB-Map.
+                            <br><br>
+                            In addition, deep learning was also applied to this research in order to provide a simple application with this system. 
+                            Our training model was to identify and calculate the amount of the flowers of eustoma farms. 
+                            Flower growers are often concerned about how many flowers grown in the greenhouse since this is highly related to their income. 
+                            Thus, a flower counting system 
                         </p>
                         <h4>Results</h4>
                         <p>
@@ -177,7 +195,8 @@
                         </p>
                         <h4>Publication</h4>
                         <p>
-                            Full paper : <a href="http://dx.doi.org/10.13031/aim.202300400"> http://dx.doi.org/10.13031/aim.202300400</a>
+                            Bachelor Thesis <br>
+                            <a href="#" class="inline-link"> #TODO </a>
                         </p>
                     </div>
                 </div>
@@ -194,10 +213,14 @@
                                         <a href="../works.html">
                                             <h6>
                                                 <u>Back to List of Works</u>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
-                                                    <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
-                                                    <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                                                  </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    fill="currentColor" class="bi bi-box-arrow-in-right"
+                                                    viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                                </svg>
                                             </h6>
                                         </a>
                                     </div>
@@ -226,8 +249,8 @@
             </div>
         </div>
     </section>
-    
-    
+
+
     <footer>
         <div class="container">
             <div class="row">
@@ -237,7 +260,7 @@
                         <img src="../assets/images/logo_white_BG.png" alt="Ideas Comes From Curiosity!">
                     </div>
                 </div>
-    
+
                 <div class="col-md-7">
                     <h4>About Me</h4>
                     <p>
@@ -273,7 +296,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/hieric517" target="_blank">
+                                <a href="https://github.com/htliang517" target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-github" viewBox="0 0 16 16">
                                         <path
@@ -287,9 +310,9 @@
                 </div>
             </div>
             <div class="row">
-    
+
             </div>
-    
+
             <div class="col-lg-12">
                 <div class="sub-footer">
                     <div class="row">
@@ -314,26 +337,26 @@
     </footer>
     <!-- (End of Footer) -->
 
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="../vendor/jquery/jquery.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
-  <script src="../assets/js/isotope.min.js"></script>
-  <script src="../assets/js/owl-carousel.js"></script>
-  <script src="../assets/js/wow.js"></script>
-  <script src="../assets/js/tabs.js"></script>
-  <script src="../assets/js/popup.js"></script>
-  <script src="../assets/js/custom.js"></script>
-  <script>
-    setTimeout(function(){
-        $('.loader').fadeToggle();
-    }, 750);
-	$("a[href='#top']").click(function() {
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-        return false;
-    });
-  </script>
+    <script src="../assets/js/isotope.min.js"></script>
+    <script src="../assets/js/owl-carousel.js"></script>
+    <script src="../assets/js/wow.js"></script>
+    <script src="../assets/js/tabs.js"></script>
+    <script src="../assets/js/popup.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>
+        setTimeout(function () {
+            $('.loader').fadeToggle();
+        }, 750);
+        $("a[href='#top']").click(function () {
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+        });
+    </script>
 
 </body>
 

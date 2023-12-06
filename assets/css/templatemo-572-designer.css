@@ -1117,6 +1117,7 @@ span.work-type-badge {
   display: inline-block;
   margin-left: 5px;
   margin-right: 5px;
+  margin-bottom: 5px;
   text-align: center;
   border-radius: 12px;
 }
@@ -1520,6 +1521,17 @@ section.explore-item .article-content p {
   text-align: justify;
   margin-bottom: 10px;
   /* text-indent: 40px; */
+}
+
+section.explore-item .article-content p.note {
+  color: #2a2a2a;
+  border: 2px solid #2a2a2a;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #ebebeb;
+  margin-bottom: 10prgb(223, 223, 223);
 }
 
 section.explore-item .article-content table,th,td {
@@ -2316,11 +2328,10 @@ section.contact-us-page .right-info ul li span {
   }
 }
 
-.main-timeline .inline-link{
+.inline-link{
   font-size: 14px;
   color: #c51230;
   font-weight: 500;
-  border-radius: 5px;
   background-color: transparent;
 }
 
