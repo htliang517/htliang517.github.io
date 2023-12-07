@@ -148,6 +148,10 @@
                 <div class="col-lg-8 offset-lg-2">
                     <div class="article-content">
                         <p>
+                            This research was my bachelor thesis conducted under Professor Lin,Ta-Te.
+                            It had also received a fellowship for undergraduate research from the Ministry of Science
+                            and Technology.
+                            <br><br>
                             In recent years, the widespread use of unmanned aerial vehicles (UAVs) in various fields has
                             been hampered by challenges in indoor navigation due to satellite signal masking. This
                             research focuses on developing an indoor autonomous navigation system for UAVs, utilizing a
@@ -156,10 +160,6 @@
                             YOLOv4 and Deep SORT for flower detection and counting. By addressing the limitations of
                             traditional methods, we aim to facilitate UAV applications in greenhouse operations with
                             enhanced precision and reduced technical barriers.
-                            <br><br>
-                            This research was my bachelor thesis conducted under Professor Lin,Ta-Te.
-                            It had also received a fellowship for undergraduate research from the Ministry of Science
-                            and Technology.
                         </p>
                         <h4>Introduction</h4>
                         <p>
@@ -175,6 +175,27 @@
                             mapping and route planning.
                         </p>
                         <h4>Approaches</h4>
+                        <h6>> Overall System Archetecture</h6>
+                        <div class="row col-sm-10 offset-sm-1">
+                            <img src="../assets/images/works/research/uav_nav/SystemOverview.png" alt="">
+                            <h5>Figure 1. Overall system archetecture</h5>
+                        </div>
+                        <p>
+                            The UAV system we had designed was composed of three main components:
+                            <br>
+                            1. Companion Computer: We used Raspberry Pi 4 as our companion computer. 
+                            A companion computer is used to reduce the computational load of the flight control unit.
+                            <br>
+                            2. Flight Control Unit(FCU)
+                            The flight control unit is used to monitor and control the four rotors. The flight control board equipped on our UAV was
+                            Pixhawk. Pixhawk is an open-sourced flight controller which contains built-in inertial measurement units (IMU).
+                            <br>
+                            3. Ground Control Station(GCS)
+                            A ground control station(GCS) is typically a software application running on a ground-based computer that communicates
+                            with the UAV through telemetry. It will monitor and display the real-time data and signals on the UAV. It can also be
+                            used to control the UAV in flight by uploading new mission plan or commands.
+                        </p>
+                        <h6>> Navigation System</h6>
                         <p>
                             Traditional method of indoor navigation for UAVs is triangulation. 
                             This method estimates the position of UAV based on the Wi-Fi signal strengths transmitted from different Wi-Fi routers.
@@ -184,15 +205,74 @@
                             Therefore, compared with traditional methods of indoor navigation, we use Visual SLAM algorithm for UAV autonomous navigation in this research. 
                             The VSLAM system used in this research is RTAB-Map.
                             <br><br>
+                            The whole navigation system can be roughly separated into three parts: mapping, localization and route planning. Both
+                            mapping and localization would be done by RTAB-Map and route planning would be implemented by move_base. Move_base is a
+                            ROS package that provides an implementation of an action that will let the robot attempt to reach a given goal in the
+                            world with its mobile base.
+                            
+                            The map of the whole environment would be constructed by conducting a guidance flight at the first flight. RTAB-Map will
+                            take the RGB-D images, IMU data from the flight control unit, and camera information as input to calculate the visual
+                            odometry. It will then generate a 2D occupancy grid map and the TF (transform of the robot from /map to /odom). The two
+                            data are then sent back to the flight controller in order to let the controller know the position of the UAV. These two
+                            data would also be used by the move_base package in order to plan route to reach the target position.
+                        </p>
+                        <div class="row col-sm-12">
+                            <img src="../assets/images/works/research/uav_nav/SystemBlockDiagram.png" alt="">
+                            <h5>Figure 2. Block diagram of the whole system</h5>
+                        </div>
+                        <h6>> Application: Flower Counting System</h6>
+                        <p>
                             In addition, deep learning was also applied to this research in order to provide a simple application with this system. 
                             Our training model was to identify and calculate the amount of the flowers of eustoma farms. 
                             Flower growers are often concerned about how many flowers grown in the greenhouse since this is highly related to their income. 
-                            Thus, a flower counting system 
+                            Thus, a flower counting system is implemented using YOLOv4 and Deep Sort. 
+                            Figure 3. shows the system archetecture of the flower counting system.
                         </p>
+                        <div class="row col-sm-12">
+                            <img src="../assets/images/works/research/uav_nav/YOLOv4withDeepsort.png" alt="">
+                            <h5>Figure 3. Flower counting system archetecture with YOLOv4 and Deep Sort</h5>
+                        </div>
+
                         <h4>Results</h4>
                         <p>
-                            #TODO
                         </p>
+                        <p>
+                            The UAV model we were using in the simulation is provided by PX4-Autopilot on GitHub and the greenhouse model was
+                            designed referring to the Eustoma farm situated in Changhua County. Once the UAV is armed, we can control our UAV
+                            through Rviz, a 3D visualization tool in ROS. We can add waypoints to the map by clicking on the control panel (Figure
+                            12). The UAV will then navigate to the designated location if the goal is reachable. This action is done by adding goals
+                            to move_base service and the service will complete route planning. While moving the UAV around, RTAB-Map is also
+                            publishing the location and poses of the UAV and updating maps to provide sufficient navigation information to move_base
+                            service. Figure 4. was the mapping result of the simulation environment. We had also tested our system on our UAVs in the greenhouse. 
+                            Figure 5. was the mapping result of a single block of the actual eustoma farm.
+                        </p>
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <img src="../assets/images/works/research/uav_nav/simulation.png" alt="">
+                                <h5>Figure 4. Mapping result in simulation using Gazebo and Rviz</h5>
+                            </div>
+                            <div class="col-sm-4 offset-sm-1">
+                                <img src="../assets/images/works/research/uav_nav/drone.jpg" alt="">
+                                <h5>Figure 5. Mapping result in reality</h5>
+                            </div>
+                        </div>
+                        <p>
+                            Pictures of the flowers were taken from the camera equipped on the UAV. These pictures were then used for our model
+                            training so that it could be used for flower detection in the future.
+                            We collected 179 pictures taken from the greenhouse and approximately 20 to 80 flowers on average are in each picture.
+                            After training from the collected images from the farm, our YOLO model can achieve F1 score 0.968, representing that the
+                            model we had trained can identify the eustoma flowers accurately.
+                            <br><br>
+                            Figure 6 was our flower counting system combined with YOLOv4 and Deep SORT. We first recorded the video through the
+                            Realsense camera equipped on the UAV and then this video was input into our flower detecting system. While detected a
+                            new flower in the frame, Deep SORT would then start figuring the detected flower’s ID. If the flower was new detected in
+                            the frame, Deep SORT would assign a new ID to it, otherwise the flower would obtain its original ID assigned while it
+                            was first detected. We could then use this ID to count the flower amount of the whole video.
+                        </p>
+                        <div class="row col-sm-10 offset-sm-1">
+                            <img src="../assets/images/works/research/uav_nav/flower_detection.png" alt="">
+                            <h5>Figure 6. Flower counting system with YOLOv4 and Deep SORT</h5>
+                        </div>
                         <h4>Publication</h4>
                         <p>
                             Bachelor Thesis <br>
