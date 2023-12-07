@@ -1166,7 +1166,7 @@ span.work-type-badge {
 }
 
 section.interior-design .left-image {
-  width: 300px;
+  width: 90%;
   height: auto;
   margin-right: 0;
 }
@@ -1178,7 +1178,7 @@ section.interior-design .left-image {
 } */
 
 section.interior-design .left-image img {
-  border-radius: 7.5px;
+  border-radius: 100%;
 }
 
 section.interior-design .right-content {
