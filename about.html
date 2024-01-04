@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
 
-    <title>Liang, Hua-Ta (Eric)</title>
+    <title>Liang,Hua-Ta(Eric)>About</title>
 
     <!-- Website Icon -->
     <link rel="shortcut icon" href="assets/images//logo.ico" />
@@ -121,7 +121,7 @@
                             and actualize creativity to contribute to the robot or software development industry.</p>
                     </div>
                     <div class="white-button">
-                        <a href="#scroll-here">Scroll Down for More</a>
+                        <a href="#scroll-here" onclick="scrollToSection(event)">Scroll Down for More</a>
                     </div>
                 </div>
             </div>
@@ -1099,6 +1099,16 @@
         })
     </script>
 
+  <script>
+    function scrollToSection(event) {
+      event.preventDefault();
+      var targetOffset = $('#scroll-here').offset().top;
+      var extraOffset = 150;
+      $('html, body').animate({
+        scrollTop: targetOffset + extraOffset
+      }, 0);
+    }
+  </script>
 </body>
 
 </html>
