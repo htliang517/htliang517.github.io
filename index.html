@@ -125,7 +125,7 @@
         </div>
     </div>
 
-    <a href="#scroll_here" class="scroll_down"></a>
+    <a href="#scroll_here" onclick="scrollToSection(event)" class="scroll_down"></a>
     <div id="scroll_here"></div>
 
     <section class="whats-trending">
@@ -436,5 +436,16 @@
             spacing: 20.00
         })
     </script>
+
+      <script>
+    function scrollToSection(event) {
+      event.preventDefault();
+      var targetOffset = $('#scroll-here').offset().top;
+      var extraOffset = 0;
+      $('html, body').animate({
+        scrollTop: targetOffset + extraOffset
+      }, 0);
+    }
+  </script>
 </body>
 </html>
