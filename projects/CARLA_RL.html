@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- [Headers] -->
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8M8D0SS9T6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8M8D0SS9T6');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <title>HTLiang>Project>AutoRpi</title>
+
+    <!-- Website Icon -->
+    <link rel="shortcut icon" href="../assets/images//logo.ico" />
+    <link rel="bookmark" href="../assets/images//logo.ico" />
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/templatemo-572-designer.css">
+    <link rel="stylesheet" href="../assets/css/owl.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <div class="loader">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" width="34px" height="40px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;"
+            xml:space="preserve">
+            <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.8s"
+                    repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.8s"
+                    repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.8s"
+                    repeatCount="indefinite" />
+            </rect>
+            <rect x="8" y="10" width="4" height="10" fill="#333" opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.8s"
+                    repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.8s"
+                    repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.8s"
+                    repeatCount="indefinite" />
+            </rect>
+            <rect x="16" y="10" width="4" height="10" fill="#333" opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.8s"
+                    repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.8s"
+                    repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.8s"
+                    repeatCount="indefinite" />
+            </rect>
+        </svg>
+    </div>
+
+    <header id="#top">
+        <nav class="main-navigation navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="../"><img src="../assets/images/logo_removeBG.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../about">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../works">Recent Works</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="../blog" target="_blank">Technical Blog</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact">Contact Me</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- [End of Header ]-->
+
+    <div class="page-banner-intro change-name">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="header-text">
+                        <h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                                class="bi bi-joystick" viewBox="0 0 16 16">
+                                <path
+                                    d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2" />
+                                <path
+                                    d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z" />
+                            </svg>
+                            <em class="project">Works</em> & <em class="project">Side</em> Project
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="explore-item">
+        <div class="container expanded">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="section-heading">
+                        <h3><em>Reinforcement Learning</em> for Autonomous Vehicles with CARLA Simulator</h3>
+                        <h4>
+                            # Keywords :
+                            <span class="badge work-type-badge border">Robotics</span>
+                            <span class="badge work-type-badge border">Reinforcement Learning</span>
+                            <span class="badge work-type-badge border">CARLA</span>
+                            <span class="badge work-type-badge border">Autonomous Driving</span>
+                        </h4>
+                    </div>
+                    <div class="main-image">
+                        <img src="../assets/images/works/projects/CARLA_RL/CARLA_RL_main.png" alt="CARLA_RL">
+                    </div>
+                </div>
+                <!-- <div class="col-lg-6">
+                    <img src="assets/images/explore-item-02.jpg" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/images/explore-item-03.jpg" alt="">
+                </div> -->
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="article-content">
+                        <p>
+                            Autonomous vehicles (AVs) hold the promise of revolutionizing transportation, yet developing
+                            robust decision-making systems for complex urban navigation remains a significant challenge.
+                            This project addresses this by developing and evaluating a reinforcement learning (RL)
+                            framework for autonomous driving within the CARLA simulator. A Double Deep Q-Network (DDQN)
+                            agent, integrating a Convolutional Neural Network (CNN) for spatial feature extraction from
+                            camera imagery and a Long Short-Term Memory (LSTM) network for temporal understanding, was
+                            implemented from scratch. The agent was trained to select from six discrete driving actions.
+                            Initial training attempts relying on pure exploration proved insufficient. Consequently, a
+                            modified strategy incorporating CARLA's built-in autopilot as a guiding baseline was
+                            adopted, alongside a custom reward function encouraging both safety and driving speed. After
+                            40,000 training frames, the final model demonstrated a significant improvement in driving
+                            performance compared to its untrained state and the baseline autopilot. The agent
+                            successfully navigated simulated urban environments, both with and without traffic,
+                            exhibiting smooth control, collision avoidance, and lane adherence. This work validates the
+                            efficacy of the CNN+LSTM DDQN approach for autonomous driving tasks in simulation and
+                            highlights the importance of guided learning strategies. The developed system provides a
+                            foundational step towards more sophisticated autonomous decision-making.
+                        </p>
+                        <h4>Introduction</h4>
+                        <p>
+                            With the rapid development of technology, autonomous vehicles provide a potential way to
+                            revolutionize transportation by improving safety, reducing traffic congestion, and enhancing
+                            mobility. However, developing autonomous vehicles (AVs) capable of safely and efficiently
+                            navigating complex urban environments is a significant challenge in both artificial
+                            intelligence and robotics fields. Traditional rule-based systems struggle to handle the vast
+                            variability and unpredictability inherent in real-world driving scenarios. Hence,
+                            reinforcement learning seems to be a possible solution to autonomous driving and is gaining
+                            popularity in the Robotics field. The primary problem addressed in this project is to
+                            develop a robust decision-making framework for autonomous vehicles using reinforcement
+                            learning (RL). Since real-world data is not easy to obtain, the whole system would be
+                            implemented in the CARLA simulator, a realistic open-source simulator for developing
+                            autonomous vehicles.
+                        </p>
+                        <h4>Approaches</h4>
+                        <p>
+                            The project consists of three main components: a simulator, the environment state, and an
+                            agent. <br><br>
+                        </p>
+                        <div class="col-sm-8 offset-sm-2">
+                            <img src="../assets/images/works/projects/CARLA_RL/OverallProjectWorkflow.png"
+                                alt="OverallProjectWorkflow" class="img-fluid">
+                        </div>
+                        <p>
+                            <br><br>
+                            The simulator generates environmental data. The environment state provides input for the
+                            model, including observations and rewards. The agent is the reinforcement
+                            learning model that is trained. By taking observations, it generates actions which
+                            are control commands sent back to the car in the simulator.<br><br>
+                        </p>
+                        <h6>> 1. CARLA Simulator</h6>
+                        <p>
+                            CARLA is an open-source simulator for autonomous driving research that provides a powerful
+                            Python API to control simulation aspects like traffic, pedestrians, weather, and sensors. It
+                            allows configuration of diverse sensors such as LIDARs, cameras, depth sensors, and GPS. In
+                            this project, CARLA was used to generate environmental datasets and provide camera frame
+                            observations for the agent. An RGB-camera with 640 x 480 resolution and a 110-degree FOV was
+                            used, along with a collision sensor. To simulate traffic, 15 non-player characters (NPCs)
+                            were spawned. For each epoch, the environment was reset, and the car was spawned in a random
+                            position to enable learning in diverse situations. The agent could choose from six discrete
+                            actions: hard left-turn, soft left-turn, straight, soft right-turn, hard right-turn, and
+                            emergency stop.<br><br>
+                        </p>
+                        <h6>> 2. Driving Policy (Reinforcement Learning, RL)</h6>
+                        <p>
+                            The project's goal was to develop a DDQN model so a car can cruise autonomously without
+                            collisions. A study by Khlifi et al. (2025) suggested a CNN+LSTM-based DDQN agent is a
+                            good approach. The workflow starts with capturing and preprocessing image frames from a
+                            front-facing camera. A CNN extracts spatial features (e.g., road structure, obstacles),
+                            which are then fed into an LSTM to capture temporal dependencies, enabling the agent to
+                            understand motion and context. The LSTM's output goes through fully connected layers to
+                            generate Q-values for each possible driving action. During training, DDQN logic, using a
+                            target network alongside the online network, updates the CNN, LSTM, and fully connected
+                            layers based on observed rewards to minimize overestimation bias. The final action is
+                            selected by picking the one with the highest Q-value.<br><br>
+                        </p>
+                        <div class="col-sm-10 offset-sm-1">
+                            <img src="../assets/images/works/projects/CARLA_RL/DQNNModelStructure.png"
+                                alt="CARLA_RL Architecture" class="img-fluid">
+                        </div>
+                        <p>
+                            <br><br>
+                            A modified reward function was used to encourage both safety and speed. The function is
+                            expressed as:<br>
+                        </p>
+                        <div class="col-sm-10 offset-sm-1">
+                            <img src="../assets/images/works/projects/CARLA_RL/reward.png" alt="Reward"
+                                class="img-fluid">
+                        </div>
+                        <p>
+                            Where Vt is the vehicle's speed and λ is a positive weight, set to 0.2 in
+                            this project.
+                            <br><br>
+                        </p>
+                        <h6>> 3. DDQN Agent Implementation</h6>
+                        <p>
+                            The DDQN agent was implemented with the following key settings:
+                            <br>
+                            <li><b>Discount Factor</b>: 0.99, to prioritize long-term rewards. </li>
+                            <li><b>Learning Rate</b>: 2e-4 for the Adam optimizer. </li>
+                            <li><b>Batch Size</b>: 64. </li>
+                            <li><b>Epsilon Greedy Exploration</b>: Epsilon starts at 1.0, decays to a
+                                final value of 0.05 over 50,000 steps. </li>
+                            <li><b>Loss Function</b>: SmoothL1Loss, which is less sensitive to outliers than
+                                MSELoss. </li>
+                            <li><b>Polyak Averaging</b>: 5e-3, used for soft updates of the target network.
+                            </li>
+                            <br>
+                            The <b>DriverModel</b> consists of a three-layer CNN for feature extraction, an LSTM network
+                            with a hidden size of 256 to process the sequential features, and a fully connected layer to
+                            output the Q-values for the six possible actions.
+                        </p>
+
+
+                        <h4>Results</h4>
+                        <p>
+                            All the result videos can be found in the following YouTube playlist:<br>
+                            <a href="https://youtube.com/playlist?list=PLyd5R-snIdOv5p9GStKQkrjmlwmka8-Xo&si=ePVuansyVjbfEqf"
+                                target="_blank" class="inline-link">
+                                https://youtube.com/playlist?list=PLyd5R-snIdOv5p9GStKQkrjmlwmka8-Xo&si=ePVuansyVjbfEqf
+                            </a>
+                        </p>
+
+                        <br>
+                        <h6>1. Initial driving status without model training and autopilot</h6>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p>
+                                    Before we started to train the model, it was important to check if our code works
+                                    properly. Since we want to train an RL model, we need to randomly make the car agent
+                                    start driving around. In the first video, we first test our agent without any
+                                    training. As the video showed, the agent is just purely driving around and trying to
+                                    maximize its speed as fast as possible. Since there is no goal point for the agent
+                                    to drive, the agent is just driving recklessly by crashing into obstacles or driving
+                                    in the wrong lane. It was also not following the traffic lights. This phenomenon
+                                    caused the learning result to be unsatisfying even after training with a ton of
+                                    epochs. Since there is no penalty in the reward function on violating the traffic
+                                    lights and crossing lanes, the agent was just trying to not collide with other
+                                    obstacles and driving recklessly. This is not what we want to see.
+                                </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <br><br>
+                                <div class="video-container">
+                                    <iframe width="100%" height="315"
+                                        src="https://www.youtube.com/embed/mWVigeGHvHs?si=eT439Q47mzItbx28"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+
+
+
+                        <h6>2. Initial driving status with autopilot but without model training</h6>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p>
+                                    <br>
+                                    To deal with the problem mentioned in previous section, we introduce an autopilot
+                                    feature
+                                    provided by the CARLA simulator. The original driving status of introducing the
+                                    autopilot feature can be seen in the second video. With no traffic on the
+                                    road, the autopilot seems to be able to drive in the town. Although it sometimes
+                                    collides with the obstacle on the road or violating the other lanes, it still can be
+                                    able to finish its job.
+                                </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="video-container">
+                                    <iframe width="100%" height="315"
+                                        src="https://www.youtube.com/embed/vDYDy_mqn6M?si=ZVgQfaOnWH2u1Nsu"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="video-container">
+                                        <iframe width="100%" height="315"
+                                            src="https://www.youtube.com/embed/cXYFr-4jvjI?si=R01AgMkjyydZw_iy"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p>
+                                        <br><br>
+                                        However, when it comes to adding traffic in the town as the
+                                        third video showed, with more obstacles in the town, the higher the chance
+                                        that the autopilot failed to drive properly. Therefore, we can now train the
+                                        model
+                                        based on the autopilot feature instead of purely train the model from a random
+                                        state.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p>
+                                        <br><br><br>
+                                        The fourth video showed the initial training with
+                                        autopilot feature in a nontraffic world. (Note that you can consider “autopilot”
+                                        feature somehow act as a “pretrained weight” in model training, although it is
+                                        not
+                                        actually a machine learning model weight or deep learning model weight.)
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="video-container">
+                                        <iframe width="100%" height="315"
+                                            src="https://www.youtube.com/embed/wTosL0_-9Ec?si=lPYyC7M9cS1WSwSv"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+
+                            <h6>3. Halfway model training result with autopilot</h6>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p>
+                                        <br><br>
+                                        After training with 20000 frames, which is half the way of the total training,
+                                        the agent can now be way better to drive in the town with traffic. Although it
+                                        still sometimes runs into obstacles or other cars, there is a significant
+                                        improvement compared to the original autopilot. The fifth video showed
+                                        the result of halfway training.
+                                    </p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="video-container">
+                                        <iframe width="100%" height="315"
+                                            src="https://www.youtube.com/embed/ZFbyOaMocRU?si=3XqJGknwy0xRyw1M"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+
+                            <h6>4. Final model training result with autopilot</h6>
+                            <div class="col-sm-12">
+                                <p>
+                                    The final model of the training with 40000 frames is quite satisfying. The agent is
+                                    now able to drive safely in the town in both situations – with traffic and without
+                                    traffic. There is no collision that occurs and the agent can drive smoothly without
+                                    invading the other lanes. The sixth video (left one) showed the agent of final model
+                                    driving in a nontraffic world while the seventh video (right one) showed the agent of
+                                    final model driving in a traffic world.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p>Driving in a nontraffic world</p>
+                                    <div class="video-container">
+                                        <iframe width="100%" height="315"
+                                            src="https://www.youtube.com/embed/9s9DA1wFXBw?si=4TmSrU6P72lLBCQD"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p>Driving in a traffic world</p>
+                                    <div class="video-container">
+                                        <iframe width="100%" height="315"
+                                            src="https://www.youtube.com/embed/JHFebaCyf_s?si=EGvQQGCaFLcWeA8E"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+
+
+                            <h4>Summary</h4>
+                            <p>
+                                Initially, without any training, the agent drove recklessly, aiming only to maximize
+                                speed, resulting in frequent crashes and traffic violations. This approach led to
+                                unsatisfying learning results. To address this, CARLA's built-in autopilot was
+                                introduced as a baseline guide. While the autopilot could navigate an empty town, its
+                                performance degraded significantly with traffic. The model was then trained using the
+                                autopilot as a starting point. After 20,000 training frames, the agent showed
+                                significant improvement, although it still had occasional collisions. The final model,
+                                after 40,000 frames, was quite satisfying, enabling the agent to drive smoothly and
+                                safely in environments both with and without traffic, avoiding collisions and adhering
+                                to lanes.<br><br>
+                            </p>
+                            <p>
+                                The trained agent demonstrated a marked improvement over both its untrained state and
+                                the baseline CARLA autopilot. It successfully navigated smoothly, avoided collisions,
+                                and maintained lane discipline in various scenarios. However, there is room for
+                                improvement. The current six-action discrete control could be modified to be linear for
+                                smoother driving. Additionally, the reward function could be adjusted to penalize
+                                stopping, as the agent sometimes stops indefinitely behind a stalled vehicle to avoid a
+                                collision.
+                            </p>
+                            <h4>Reference</h4>
+                            <p>
+                                > For full report, please visit: <a href="TODO" target="_blank"
+                                    class="inline-link">TODO</a>
+                            </p>
+                            <p>
+                                > For project code, please visit: <a href="TODO" target="_blank"
+                                    class="inline-link">TODO</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <div class="projects-pagination">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="left-pagination">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="right-pagination">
+                                        <div class="float-end left-content">
+                                            <a href="../works">
+                                                <h6>
+                                                    <u>Back to List of Works</u>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        fill="currentColor" class="bi bi-box-arrow-in-right"
+                                                        viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd"
+                                                            d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                                    </svg>
+                                                </h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!--  [Footer] -->
+    <section class="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2><em>Want To Know More About Me ?</em></h2>
+                </div>
+                <div class="col-lg-4">
+                    <div class="white-button">
+                        <a href="contact">Contact Me Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="about-widget">
+                        <h4>&nbsp</h4>
+                        <img src="../assets/images/logo_white_BG.png" alt="Ideas Comes From Curiosity!">
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+                    <h4>About Me</h4>
+                    <p>
+                        Majoring in Autonomy and Robotics at University of Illinois Urbana-Champaign.
+                        Recieved Bachelor degree in Bio-mechatronics Engineering at National Taiwan University.
+                        Interseted in coding and building autonomus robots. Hobbies are photography and hiking.
+                        Seeking for opportunities to utilize the acquired skill sets
+                        to contribute to the robot or software development industry.
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <h4>Contact Me</h4>
+                    <div class="follow-us">
+                        <ul class="social-links">
+                            <li>
+                                <a href="mailto:htliang517@gmail.com" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                                    </svg>
+                                    Email
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/htliang517" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-linkedin" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                    </svg>
+                                    Linkedin
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/htliang517" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-github" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                    </svg>
+                                    Github
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+
+            <div class="col-lg-12">
+                <div class="sub-footer">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>Copyright © 2025. Liang, Hua-Ta (Eric). All Rights Reserved. </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#top" class="scroll-to-top">
+                                Go to Top
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- (End of Footer) -->
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="../assets/js/isotope.min.js"></script>
+    <script src="../assets/js/owl-carousel.js"></script>
+    <script src="../assets/js/wow.js"></script>
+    <script src="../assets/js/tabs.js"></script>
+    <script src="../assets/js/popup.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>
+        setTimeout(function () {
+            $('.loader').fadeToggle();
+        }, 750);
+        $("a[href='#top']").click(function () {
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+        });
+    </script>
+
+</body>
+
+</html>

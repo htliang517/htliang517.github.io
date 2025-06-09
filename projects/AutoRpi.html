@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- [Headers] -->
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8M8D0SS9T6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8M8D0SS9T6');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <title>HTLiang>Project>AutoRpi</title>
+
+    <!-- Website Icon -->
+    <link rel="shortcut icon" href="../assets/images//logo.ico" />
+    <link rel="bookmark" href="../assets/images//logo.ico" />
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/templatemo-572-designer.css">
+    <link rel="stylesheet" href="../assets/css/owl.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <div class="loader">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" width="34px" height="40px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;"
+            xml:space="preserve">
+            <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.8s"
+                    repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.8s"
+                    repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.8s"
+                    repeatCount="indefinite" />
+            </rect>
+            <rect x="8" y="10" width="4" height="10" fill="#333" opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.8s"
+                    repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.8s"
+                    repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.8s"
+                    repeatCount="indefinite" />
+            </rect>
+            <rect x="16" y="10" width="4" height="10" fill="#333" opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.8s"
+                    repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.8s"
+                    repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.8s"
+                    repeatCount="indefinite" />
+            </rect>
+        </svg>
+    </div>
+
+    <header id="#top">
+        <nav class="main-navigation navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="../"><img src="../assets/images/logo_removeBG.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../about">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../works">Recent Works</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="../blog" target="_blank">Technical Blog</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contact">Contact Me</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- [End of Header ]-->
+
+    <div class="page-banner-intro change-name">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="header-text">
+                        <h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                                class="bi bi-joystick" viewBox="0 0 16 16">
+                                <path
+                                    d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2" />
+                                <path
+                                    d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z" />
+                            </svg>
+                            <em class="project">Works</em> & <em class="project">Side</em> Project
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="explore-item">
+        <div class="container expanded">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="section-heading">
+                        <h3><em>Self-Driving</em> Raspberry Pi Car</h3>
+                        <h4>
+                            # Keywords :
+                            <span class="badge work-type-badge border">IoT</span>
+                            <span class="badge work-type-badge border">Robotics</span>
+                            <span class="badge work-type-badge border">Raspberry Pi</span>
+                            <span class="badge work-type-badge border">Obstacle Avoidance</span>
+                            <span class="badge work-type-badge border">Path Planning</span>
+                        </h4>
+                    </div>
+                    <div class="main-image">
+                        <img src="../assets/images/works/projects/AutoRpi/AutoRpi.png" alt="AutoRpi">
+                    </div>
+                </div>
+                <!-- <div class="col-lg-6">
+                    <img src="assets/images/explore-item-02.jpg" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/images/explore-item-03.jpg" alt="">
+                </div> -->
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="article-content">
+                        <p>
+                            <!-- Abstract section -->
+                        </p>
+                        <h4>Introduction</h4>
+                        <p>
+                            Autonomous navigation remains one of the most challenging yet promising frontiers in
+                            robotics and artificial intelligence. This project presents a complete autonomous navigation
+                            system implemented on a Raspberry Pi-powered car, capable of object detection, environmental
+                            mapping, optimal path planning, and real-time navigation control. This project demonstrates
+                            how an embeded computer with limited computation power and sensors can be leveraged to
+                            create
+                            a miniature self-driving vehicle that
+                            can detect obstacles, recognize stop signs, dynamically remap its environment, and plot
+                            alternative routes to reach target destinations.
+                            <br><br>
+                            The system architecture divides the autonomous driving challenge into four distinct but
+                            interconnected tasks: Object Detection, Mapping, Planning, and Navigation. Each component
+                            plays a crucial role in the overall workflow: the car initializes with a clean map, plans an
+                            optimal path, detects obstacles with ultrasonic sensors, remaps the environment when
+                            necessary, identifies stop signs with computer vision, and navigates to predefined waypoints
+                            while avoiding collisions.
+                        </p>
+                        <h4>Approaches</h4>
+                        <p>
+                            The overall autonomous system workflow is:
+                            <br>- <em>Initialization</em> : The system starts with an empty map and computes an initial
+                            path using user-defined start and end points.
+                            <br>- <em>Continuous Monitoring</em> : As the car follows the planned path, it continuously
+                            monitors for obstacles with the ultrasonic sensor and for stop signs with the camera.
+                            <br>- <em>Dynamic Adaptation</em> : When an obstacle is detected, the car stops, updates its
+                            map, computes a new path, and resumes navigation.
+                            <br>- <em>Multiple Destinations</em> : The system can handle sequential navigation to
+                            multiple destinations, automatically switching to the next goal point after reaching the
+                            current one.
+                        </p>
+                        <p>
+                        <h6>Mapping System</h6>
+                        <p>
+                            The mapping component transforms sensor data into a usable representation of the environment
+                            through a series of processes:
+                        </p>
+                        <h6>&gt; 1.Map Initialization</h6>
+                        <p>
+                            A grid-based square map (25×25) is created, with each cell initialized to 0 to represent
+                            free space. Each grid cell corresponds to approximately 11.4 cm in the real world.
+                        </p>
+                        <!-- <div class="col-sm-12">
+                            <img src="../assets/images/works/projects/AutoGEM/GEMe2.png" alt="GEMe2">
+                            <h5>Figure 1. Hardware architecture</h5>
+                        </div> -->
+                        <h6>&gt; 2.Obstacle Detection</h6>
+                        <p>
+                            The system uses an ultrasonic sensor to scan the environment by measuring distances at
+                            angles ranging from -60° to 60° in 5° increments. To mitigate sensor noise, five distance
+                            readings are taken at each angle, and the median value is used.
+                        <h6>&gt; 3.Coordinate Transformation</h6>
+                        <p>
+                            Using the car's current position and orientation, trigonometric calculations convert
+                            ultrasonic sensor readings into Cartesian coordinates on the occupancy grid. Detected
+                            obstacles within a valid range (50 cm) are marked as 1 on the grid.
+                        </p>
+                        <h6>&gt; 4.Point Interpolation</h6>
+                        <p>
+                            To address sparse detection points, the system connects nearby points that likely belong to
+                            the same obstacle. Points are considered connected if the angle difference is less than 10
+                            degrees and the Euclidean distance is less than 10 cm. The Bresenham line algorithm fills
+                            gaps between connected points.
+                        </p>
+                        <h6>&gt; 5.Obstacle Expansion</h6>
+                        <p>
+                            Binary dilation operations are applied to the detected obstacles to account for the car's
+                            physical dimensions and sensor inaccuracies, effectively enlarging the obstacle areas on the
+                            map.
+                        </p>
+                        <h6>&gt; 6.Map Updating</h6>
+                        <p>
+                            The system merges newly detected obstacles with previously scanned data using bitwise OR
+                            operations, ensuring that all obstacles remain in the final map.
+                        </p>
+
+                        <h6>Object Detection</h6>
+                        <!-- <div class="col-sm-12">
+                            <img src="../assets/images/works/projects/AutoGEM/SystemArchitecture.png"
+                                alt="system architecture">
+                            <h5>Figure 2. Software architecture of the system.</h5>
+                        </div> -->
+                        <p>
+                            The object detection system leverages computer vision technologies to identify stop signs
+                            and other relevant objects:
+                        </p>
+                        <h6>&gt; 1.Hardware Setup</h6>
+                        <p>
+                            Images are captured using the Raspberry Pi camera (Picamera2) at a resolution of 640×480
+                            pixels, maintaining a frame rate of 8 frames per second for real-time processing.
+                        </p>
+                        <h6>&gt; 2.Processing Pipeline</h6>
+                        <p>
+                            Captured images are processed using OpenCV and then analyzed with TensorFlow Lite running an
+                            EfficientDet-Lite0 model.
+                        </p>
+                        <h6>&gt; 3.Stop Sign Detection</h6>
+                        <p>
+                            When a stop sign is detected, a 'stop_needed' flag is set in the controller, forcing the car
+                            to halt for 5 seconds before continuing navigation.
+                        </p>
+
+                        <h6>Path Planning</h6>
+                        <p>
+                            The planning component determines optimal paths using the A* algorithm:
+                        </p>
+                        <h6>&gt; 1.Heuristic Function</h6>
+                        <p>
+                            Euclidean distance serves as the heuristic function, estimating the cost from any position
+                            to the goal and guiding the search process.
+                        </p>
+                        <h6>&gt; 2.Path Planning</h6>
+                        <p>
+                            The A* algorithm prioritizes exploration of the most promising nodes first, efficiently
+                            finding the shortest path while avoiding obstacles.
+                        </p>
+                        <h6>&gt; 3.Dynamic Replanning</h6>
+                        <p>
+                            When obstacles are detected, the system replans the route based on the updated map, ensuring
+                            adaptation to environmental changes.
+                        </p>
+
+
+
+                        <h6>Control System</h6>
+                        <p>
+                            The navigation controller translates planned paths into physical movements:
+                        </p>
+                        <h6>&gt; 1.Parameter Configuration</h6>
+                        <p>
+                            Key control parameters, including PWM settings and turning times, are stored in a
+                            configuration file for easy adjustment during testing.
+                        </p>
+                        <h6>&gt; 2.Motion Control</h6>
+                        <p>
+                            The system includes functions for moving forward and turning left or right by 45 degrees.
+                        </p>
+                        <h6>&gt; 3.Waypoint Navigation</h6>
+                        <p>
+                            For each waypoint in the planned path, the controller calculates the desired heading angle
+                            using the atan2 function and determines the steering angle as the difference between the
+                            desired heading and the car's current orientation.
+                        </p>
+                        <h6>&gt; 4.Obstacle Avoidance</h6>
+                        <p>
+                            The front-facing ultrasonic sensor continuously monitors for obstacles. If an obstacle is
+                            detected within 40 cm, the car stops and rescans the environment from -60° to 60°.
+                        </p>
+                        <h6>&gt; 5.State Estimation</h6>
+                        <p>
+                            The system updates the car's position by assuming perfect execution of movement commands,
+                            with the arrived waypoint designated as the car's new location.
+                        </p>
+
+
+                        <h4>Results</h4>
+                        <p>
+                            The autonomous system was successfully tested in three distinct scenarios:
+                        <div class="row">
+                        <div class="col-sm-6">
+                        <h6>&gt; Scenario 1: Two Obstacles with Multiple Goals</h6>
+                        <p>
+                            The car was tasked with reaching two sequential goal points, with the first goal positioned
+                            in front of an obstacle (labeled as obstacle 2) and the second goal behind it. As the car
+                            progressed, it first detected obstacle 1 and a wall, updating its map accordingly.
+                            Continuing along the optimal path, it detected obstacle 2, rescanned the environment, and
+                            generated an updated map. After reaching the first goal, it detected obstacle 2 again,
+                            performed another scan, and created a third map. Finally, the car successfully navigated
+                            around obstacle 2 to reach the second goal.
+                        </p>
+                        </div>
+                        <div class="col-sm-4 offset-sm-1">
+                            <img src="../assets/images/works/projects/AutoRpi/Scenario1_mapping.png" alt="Scenario1_mapping">
+                            <h5>Figure 1. Mapping result of scenario 1</h5>
+                        </div>
+                        </div>
+                        <h6>&gt; Scenario 2: Two Obstacles in Different Positions</h6>
+                        <p>
+                            Similar to the first scenario but with obstacles placed in different locations, the car
+                            demonstrated its ability to adapt to varying environmental configurations. The system
+                            successfully detected both obstacles, updated its map, planned an optimal route, and reached
+                            the single goal point.
+                        </p>
+                        <div class="row">
+                        <div class="col-sm-6">
+                        <h6>&gt; Scenario 3: One Obstacle with Stop Sign</h6>
+                        <p>
+                            This scenario incorporated both physical obstacle avoidance and traffic sign recognition.
+                            The car navigated toward the goal while properly responding to a detected stop sign by
+                            halting for the required 5 seconds before continuing. The mapping system correctly
+                            identified and marked both the obstacle and the room walls.
+                        </p>
+                        </div>
+                        <div class="col-sm-4 offset-sm-1">
+                            <img src="../assets/images/works/projects/AutoRpi/Scenario2_mapping.png" alt="Scenario2_mapping">
+                            <h5>Figure 2. Mapping result of scenario 3</h5>
+                        </div>
+                        </div>
+                        </p>
+                        <h6>&gt; Demo Video</h6>
+                        <div class="col-sm-12">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item"
+                                    src="https://www.youtube.com/embed/QMKXWQFPDUE?si=IHFEVC_nEkYZ2DyQ" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                        <br>
+                        <p>
+                            These results demonstrate the system's robustness in handling various obstacles, recognizing
+                            traffic signs, and dynamically replanning paths to reach designated destinations. The
+                            project successfully integrates sensing, mapping, planning, and control into a functional
+                            autonomous navigation system, showcasing the potential of low-cost robotics platforms for
+                            complex autonomous tasks.
+                        </p>
+                        <h4>Project Code</h4>
+                        <p>
+                            &gt; For the whole project code, please visit: <a href="##LINK_TODO" target="_blank"
+                                class="inline-link">##LINK_TODO</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="projects-pagination">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="left-pagination">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="right-pagination">
+                                    <div class="float-end left-content">
+                                        <a href="../works">
+                                            <h6>
+                                                <u>Back to List of Works</u>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    fill="currentColor" class="bi bi-box-arrow-in-right"
+                                                    viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd"
+                                                        d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+                                                    <path fill-rule="evenodd"
+                                                        d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                                </svg>
+                                            </h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--  [Footer] -->
+    <section class="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2><em>Want To Know More About Me ?</em></h2>
+                </div>
+                <div class="col-lg-4">
+                    <div class="white-button">
+                        <a href="contact">Contact Me Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="about-widget">
+                        <h4>&nbsp</h4>
+                        <img src="../assets/images/logo_white_BG.png" alt="Ideas Comes From Curiosity!">
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+                    <h4>About Me</h4>
+                    <p>
+                        Majoring in Autonomy and Robotics at University of Illinois Urbana-Champaign.
+                        Recieved Bachelor degree in Bio-mechatronics Engineering at National Taiwan University.
+                        Interseted in coding and building autonomus robots. Hobbies are photography and hiking.
+                        Seeking for opportunities to utilize the acquired skill sets
+                        to contribute to the robot or software development industry.
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <h4>Contact Me</h4>
+                    <div class="follow-us">
+                        <ul class="social-links">
+                            <li>
+                                <a href="mailto:htliang517@gmail.com" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                                    </svg>
+                                    Email
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/htliang517" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-linkedin" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                    </svg>
+                                    Linkedin
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/htliang517" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-github" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                    </svg>
+                                    Github
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+
+            <div class="col-lg-12">
+                <div class="sub-footer">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>Copyright © 2025. Liang, Hua-Ta (Eric). All Rights Reserved. </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <a href="#top" class="scroll-to-top">
+                                Go to Top
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- (End of Footer) -->
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="../assets/js/isotope.min.js"></script>
+    <script src="../assets/js/owl-carousel.js"></script>
+    <script src="../assets/js/wow.js"></script>
+    <script src="../assets/js/tabs.js"></script>
+    <script src="../assets/js/popup.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script>
+        setTimeout(function () {
+            $('.loader').fadeToggle();
+        }, 750);
+        $("a[href='#top']").click(function () {
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+        });
+    </script>
+
+</body>
+
+</html>
