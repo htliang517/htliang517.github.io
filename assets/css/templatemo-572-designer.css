@@ -598,12 +598,16 @@ section.whats-trending .left-content p {
 }
 
 section.whats-trending .right-image {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   position: relative;
   max-width: 100%;
   padding-right: 10px;
   padding-left: 10px;
   padding-bottom: 20px;
 }
+
 
 section.whats-trending .right-image .thumb span.banner_research {
   background-color: #bc0000; /*Original:ff565b*/
@@ -665,6 +669,10 @@ section.whats-trending .right-image .thumb span.banner_title {
 
 section.whats-trending .right-image .thumb {
   position: relative;
+  position: relative; /* Crucial for positioning the image inside */
+  flex-grow: 1;
+  border-radius: 7.5px; /* Move border-radius from the image to its container */
+  overflow: hidden; /* Hide parts of the image that are outside the container */
 }
 
 
