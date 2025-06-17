@@ -96,6 +96,26 @@ button.main-button:hover {
   background-color: #2a2a2a;
 }
 
+.social-icons {
+  text-align: center; /* Centers the icons container */
+  margin-top: 15px; /* Adds space above the icons */
+  margin-bottom: 15px; /* Adds space below the icons */
+}
+
+.social-icons a {
+  display: inline-block;
+  color: #ff565b; /* Sets icon color to white */
+  font-size: 36px; /* Adjust icon size as needed */
+  margin: 0 15px; /* Adds space between the icons */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.social-icons a:hover {
+  color: #ffffff; /* Change color on hover - pick a color that matches your design */
+  transform: scale(1.2); /* Slightly enlarges the icon on hover */
+}
+
 .white-button a {
   font-size: 14px;
   text-transform: capitalize;
