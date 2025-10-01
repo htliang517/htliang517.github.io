@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
 
-    <title>HTLiang>Project>AutoRpi</title>
+    <title>HTLiang>Project>AutoSlalom</title>
 
     <!-- Website Icon -->
     <link rel="shortcut icon" href="../assets/images//logo.ico" />
@@ -132,18 +132,17 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="section-heading">
-                        <h3><em>Self-Driving</em> Raspberry Pi Car</h3>
+                        <h3><em>Auto</em>nomous <em>Slalom</em> Driving System</h3>
                         <h4>
                             # Keywords :
-                            <span class="badge work-type-badge border">IoT</span>
                             <span class="badge work-type-badge border">Robotics</span>
-                            <span class="badge work-type-badge border">Raspberry Pi</span>
-                            <span class="badge work-type-badge border">Obstacle Avoidance</span>
+                            <span class="badge work-type-badge border">ROS</span>
+                            <span class="badge work-type-badge border">Vision-Based</span>
                             <span class="badge work-type-badge border">Path Planning</span>
                         </h4>
                     </div>
                     <div class="main-image">
-                        <img src="../assets/images/works/projects/AutoRpi/AutoRpi.png" alt="AutoRpi">
+                        <img src="../assets/images/works/projects/AutoSlalom/AutoSlalom_main.png" alt="AutoSlalom">
                     </div>
                 </div>
                 <!-- <div class="col-lg-6">
@@ -152,220 +151,133 @@
                 <div class="col-lg-6">
                     <img src="assets/images/explore-item-03.jpg" alt="">
                 </div> -->
+                <!--=============================-->
                 <div class="col-lg-8 offset-lg-2">
                     <div class="article-content">
                         <p>
-                            <!-- Abstract section -->
-                        </p>
-                        <h4>Introduction</h4>
-                        <p>
-                            Autonomous navigation remains one of the most challenging yet promising frontiers in
-                            robotics and artificial intelligence. This project presents a complete autonomous navigation
-                            system implemented on a Raspberry Pi-powered car, capable of object detection, environmental
-                            mapping, optimal path planning, and real-time navigation control. This project demonstrates
-                            how an embeded computer with limited computation power and sensors can be leveraged to
-                            create
-                            a miniature self-driving vehicle that
-                            can detect obstacles, recognize stop signs, dynamically remap its environment, and plot
-                            alternative routes to reach target destinations.
-                            <br><br>
-                            The system architecture divides the autonomous driving challenge into four distinct but
-                            interconnected tasks: Object Detection, Mapping, Planning, and Navigation. Each component
-                            plays a crucial role in the overall workflow: the car initializes with a clean map, plans an
-                            optimal path, detects obstacles with ultrasonic sensors, remaps the environment when
-                            necessary, identifies stop signs with computer vision, and navigates to predefined waypoints
-                            while avoiding collisions.
+                            This project focuses on developing a complete software stack for autonomous racing. The
+                            primary goal was to enable a vehicle to drive a set path and a cone slalom course at
+                            similar speeds to a human driver. Key objectives included improving
+                            acceleration through launch control, enhancing high-speed vehicle control using advanced
+                            techniques like trail braking, and generating an optimal racing line in real-time based on
+                            sensor data.
                         </p>
                         <h4>Approaches</h4>
                         <p>
-                            The overall autonomous system workflow is:
-                            <br>- <em>Initialization</em> : The system starts with an empty map and computes an initial
-                            path using user-defined start and end points.
-                            <br>- <em>Continuous Monitoring</em> : As the car follows the planned path, it continuously
-                            monitors for obstacles with the ultrasonic sensor and for stop signs with the camera.
-                            <br>- <em>Dynamic Adaptation</em> : When an obstacle is detected, the car stops, updates its
-                            map, computes a new path, and resumes navigation.
-                            <br>- <em>Multiple Destinations</em> : The system can handle sequential navigation to
-                            multiple destinations, automatically switching to the next goal point after reaching the
-                            current one.
-                        </p>
-                        <p>
-                        <h6>Mapping System</h6>
-                        <p>
-                            The mapping component transforms sensor data into a usable representation of the environment
-                            through a series of processes:
-                        </p>
-                        <h6>&gt; 1.Map Initialization</h6>
-                        <p>
-                            A grid-based square map (25×25) is created, with each cell initialized to 0 to represent
-                            free space. Each grid cell corresponds to approximately 11.4 cm in the real world.
-                        </p>
-                        <!-- <div class="col-sm-12">
-                            <img src="../assets/images/works/projects/AutoGEM/GEMe2.png" alt="GEMe2">
-                            <h5>Figure 1. Hardware architecture</h5>
-                        </div> -->
-                        <h6>&gt; 2.Obstacle Detection</h6>
-                        <p>
-                            The system uses an ultrasonic sensor to scan the environment by measuring distances at
-                            angles ranging from -60° to 60° in 5° increments. To mitigate sensor noise, five distance
-                            readings are taken at each angle, and the median value is used.
-                        <h6>&gt; 3.Coordinate Transformation</h6>
-                        <p>
-                            Using the car's current position and orientation, trigonometric calculations convert
-                            ultrasonic sensor readings into Cartesian coordinates on the occupancy grid. Detected
-                            obstacles within a valid range (50 cm) are marked as 1 on the grid.
-                        </p>
-                        <h6>&gt; 4.Point Interpolation</h6>
-                        <p>
-                            To address sparse detection points, the system connects nearby points that likely belong to
-                            the same obstacle. Points are considered connected if the angle difference is less than 10
-                            degrees and the Euclidean distance is less than 10 cm. The Bresenham line algorithm fills
-                            gaps between connected points.
-                        </p>
-                        <h6>&gt; 5.Obstacle Expansion</h6>
-                        <p>
-                            Binary dilation operations are applied to the detected obstacles to account for the car's
-                            physical dimensions and sensor inaccuracies, effectively enlarging the obstacle areas on the
-                            map.
-                        </p>
-                        <h6>&gt; 6.Map Updating</h6>
-                        <p>
-                            The system merges newly detected obstacles with previously scanned data using bitwise OR
-                            operations, ensuring that all obstacles remain in the final map.
+                            Our system is designed as a modular pipeline that processes sensor data to produce vehicle
+                            commands. The core components are Sensing, Racing Planner, Velocity Optimization, and
+                            Control.
                         </p>
 
-                        <h6>Object Detection</h6>
-                        <!-- <div class="col-sm-12">
-                            <img src="../assets/images/works/projects/AutoGEM/SystemArchitecture.png"
-                                alt="system architecture">
-                            <h5>Figure 2. Software architecture of the system.</h5>
-                        </div> -->
+                        <h6>Sensing and Perception</h6>
                         <p>
-                            The object detection system leverages computer vision technologies to identify stop signs
-                            and other relevant objects:
-                        </p>
-                        <h6>&gt; 1.Hardware Setup</h6>
-                        <p>
-                            Images are captured using the Raspberry Pi camera (Picamera2) at a resolution of 640×480
-                            pixels, maintaining a frame rate of 8 frames per second for real-time processing.
-                        </p>
-                        <h6>&gt; 2.Processing Pipeline</h6>
-                        <p>
-                            Captured images are processed using OpenCV and then analyzed with TensorFlow Lite running an
-                            EfficientDet-Lite0 model.
-                        </p>
-                        <h6>&gt; 3.Stop Sign Detection</h6>
-                        <p>
-                            When a stop sign is detected, a 'stop_needed' flag is set in the controller, forcing the car
-                            to halt for 5 seconds before continuing navigation.
+                            The system's perception module is responsible for detecting cones on the track. It
+                            identifies the location, orientation (e.g., standing, left, right), and ID of each cone.
+                            This environmental data serves as the primary input for the motion planner.
                         </p>
 
-                        <h6>Path Planning</h6>
+                        <h6>Racing Planner</h6>
                         <p>
-                            The planning component determines optimal paths using the A* algorithm:
+                            The Racing Planner generates a dynamically feasible trajectory based on the detected cones.
+                            The process involves several steps:
+                            <br>- <strong>Step 1</strong>: Identify the next two closest cones to plan a path segment.
+                            <br>- <strong>Step 2</strong>: Generate temporary waypoints based on the cone's orientation.
                         </p>
-                        <h6>&gt; 1.Heuristic Function</h6>
+                        <div class="text-center my-4">
+                            <img src="../assets/images/works/projects/AutoSlalom/AutoSlalom_waypoint.png"
+                                alt="Waypoint generation" >
+                            <h5 class="mt-2 font-italic">Figure 1. Logic of waypoint generation</h5>
+                        </div>
                         <p>
-                            Euclidean distance serves as the heuristic function, estimating the cost from any position
-                            to the goal and guiding the search process.
+                            <br>- <strong>Step 3</strong>: Solve a discrete-time optimization problem to generate a
+                            smooth and fast trajectory. The cost function minimizes curvature, steering effort, and
+                            speed variance while aiming for the goal state.
                         </p>
-                        <h6>&gt; 2.Path Planning</h6>
+                        <div class="text-center my-4">
+                            <img src="../assets/images/works/projects/AutoSlalom/AutoSlalom_optimization.png"
+                                alt="Waypoint generation" >
+                            <h5 class="mt-2 font-italic">Figure 2. Logic of trajectory optimization</h5>
+                        </div>
                         <p>
-                            The A* algorithm prioritizes exploration of the most promising nodes first, efficiently
-                            finding the shortest path while avoiding obstacles.
-                        </p>
-                        <h6>&gt; 3.Dynamic Replanning</h6>
-                        <p>
-                            When obstacles are detected, the system replans the route based on the updated map, ensuring
-                            adaptation to environmental changes.
-                        </p>
-
-
-
-                        <h6>Control System</h6>
-                        <p>
-                            The navigation controller translates planned paths into physical movements:
-                        </p>
-                        <h6>&gt; 1.Parameter Configuration</h6>
-                        <p>
-                            Key control parameters, including PWM settings and turning times, are stored in a
-                            configuration file for easy adjustment during testing.
-                        </p>
-                        <h6>&gt; 2.Motion Control</h6>
-                        <p>
-                            The system includes functions for moving forward and turning left or right by 45 degrees.
-                        </p>
-                        <h6>&gt; 3.Waypoint Navigation</h6>
-                        <p>
-                            For each waypoint in the planned path, the controller calculates the desired heading angle
-                            using the atan2 function and determines the steering angle as the difference between the
-                            desired heading and the car's current orientation.
-                        </p>
-                        <h6>&gt; 4.Obstacle Avoidance</h6>
-                        <p>
-                            The front-facing ultrasonic sensor continuously monitors for obstacles. If an obstacle is
-                            detected within 40 cm, the car stops and rescans the environment from -60° to 60°.
-                        </p>
-                        <h6>&gt; 5.State Estimation</h6>
-                        <p>
-                            The system updates the car's position by assuming perfect execution of movement commands,
-                            with the arrived waypoint designated as the car's new location.
+                            <br>- <strong>Step 4</strong>: Re-plan the trajectory as new cones are detected to react to
+                            the course in real-time.
                         </p>
 
+                        <h6>Velocity Optimization and Control</h6>
+                        <p>
+                            To drive the planned path quickly, we first generate an optimal velocity profile. This
+                            profile is calculated based on the vehicle's physical limits, which were determined by
+                            analyzing data from aggressive manual driving to create a <strong>G-G Diagram</strong>. 
+                        </p>
+                        <div class="text-center my-4">
+                            <img src="../assets/images/works/projects/AutoSlalom/AutoSlalom_velocity_profile.png"
+                                alt="Waypoint generation" >
+                            <h5 class="mt-2 font-italic">Figure 3. Vehicle limitation constraints</h5>
+                        </div>
+                        <p>
+                            This optimized path and velocity profile is then passed to a <strong>modified Stanley
+                                controller</strong> for precise path tracking. The controller was enhanced with racing
+                            modifications and a PID controller for speed, which significantly improved performance and
+                            reduced cross-track error compared to a standard implementation.
+                        </p>
+
+                        <h6>Launch Control</h6>
+                        <p>
+                            A dedicated launch control system was developed to maximize acceleration from a complete
+                            stop. This system overrides the standard controls at takeoff to optimize the vehicle's
+                            launch, providing a measurable performance gain in acceleration tests.
+                        </p>
 
                         <h4>Results</h4>
                         <p>
-                            The autonomous system was successfully tested in three distinct scenarios:
-                        <h6>&gt; Scenario 1: Two Obstacles with Multiple Goals</h6>
+                            The system was tested extensively, both as individual modules and as a fully integrated
+                            stack. The results demonstrate significant performance improvements from our implemented
+                            strategies.
+                        </p>
+
+                        <h6>Launch Control Performance</h6>
                         <p>
-                            The car was tasked with reaching two sequential goal points, with the first goal positioned
-                            in front of an obstacle (labeled as obstacle 2) and the second goal behind it. As the car
-                            progressed, it first detected obstacle 1 and a wall, updating its map accordingly.
-                            Continuing along the optimal path, it detected obstacle 2, rescanned the environment, and
-                            generated an updated map. After reaching the first goal, it detected obstacle 2 again,
-                            performed another scan, and created a third map. Finally, the car successfully navigated
-                            around obstacle 2 to reach the second goal.
+                            The launch control system provided a clear advantage in acceleration. In a 50-meter dash,
+                            the vehicle's time improved from <strong>10.3 seconds</strong> without launch control to
+                            <strong>9.1 seconds</strong> with it enabled.
                         </p>
-                        <h6>&gt; Scenario 2: Two Obstacles in Different Positions</h6>
+                        <h6>Full System Performance vs. Human Driver</h6>
                         <p>
-                            Similar to the first scenario but with obstacles placed in different locations, the car
-                            demonstrated its ability to adapt to varying environmental configurations. The system
-                            successfully detected both obstacles, updated its map, planned an optimal route, and reached
-                            the single goal point.
+                            We compared our final system against a human driver on two different courses.
+                            <br>- <strong>Set Course</strong>: On a closed circuit, the <em>Stanley + Racing</em>
+                            controller completed a lap in <strong>33 seconds</strong>, which was a significant
+                            improvement over the <em>Pure Stanley</em> controller's 55-second lap time. However, the
+                            human driver was still a little faster at 30 seconds.
+                            <br>- <strong>Slalom Course</strong>: In the slalom test with 20m cone spacing, the
+                            automated system took <strong>28 seconds</strong>, while the human driver completed it in
+                            <strong>20 seconds</strong>. The performance gap was largely due to a slow automated
+                            steering rate at sharp turns.
                         </p>
-                        <h6>&gt; Scenario 3: One Obstacle with Stop Sign</h6>
+                        
+                        <h6>Demo Video</h6>
                         <p>
-                            This scenario incorporated both physical obstacle avoidance and traffic sign recognition.
-                            The car navigated toward the goal while properly responding to a detected stop sign by
-                            halting for the required 5 seconds before continuing. The mapping system correctly
-                            identified and marked both the obstacle and the room walls.
-                        </p>
-                        </p>
-                        <h6>&gt; Demo Video</h6>
+                            Watch a full demonstration of the system:
                         <div class="col-sm-12">
                             <div class="embed-responsive embed-responsive-16by9">
                                 <iframe class="embed-responsive-item"
-                                    src="https://www.youtube.com/embed/wbmVWwUvd00?si=Qci8nfHYQcEIdEbd" frameborder="0"
+                                    src="https://www.youtube.com/embed/ZDqKKDAQcy4?si=x9hZnF26i8mkzYyQ" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowfullscreen>
                                 </iframe>
                             </div>
                         </div>
-                        <br>
-                        <p>
-                            These results demonstrate the system's robustness in handling various obstacles, recognizing
-                            traffic signs, and dynamically replanning paths to reach designated destinations. The
-                            project successfully integrates sensing, mapping, planning, and control into a functional
-                            autonomous navigation system, showcasing the potential of low-cost robotics platforms for
-                            complex autonomous tasks.
                         </p>
-                        <h4>Project Code</h4>
                         <p>
-                            &gt; For the whole project code, please visit: <a href="##LINK_TODO" target="_blank"
-                                class="inline-link">##LINK_TODO</a>
+                            <br>
+                            This project highlighted several key challenges in autonomous racing. Integrating different
+                            complex modules like perception, planning, and control proved difficult. We also found that
+                            there was a significant mismatch between simulation and real-world vehicle behavior, which
+                            made parameter tuning challenging. Overcoming the vehicle's physical limitations, such as a
+                            slow steering rate, is crucial for achieving competitive performance.
                         </p>
                     </div>
                 </div>
+                <!--=============================-->
                 <div class="col-lg-12">
                     <div class="projects-pagination">
                         <div class="row">
