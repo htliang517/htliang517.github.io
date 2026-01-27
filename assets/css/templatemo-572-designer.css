@@ -239,7 +239,7 @@ header.nav-scrolled .main-navigation {
   padding: 10px 0px;
   position: fixed;
   z-index: 222;
-  background-color: #2a2a2a;
+  background-color: rgba(42, 42, 42, 0.85);
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   z-index: 100;
@@ -247,6 +247,11 @@ header.nav-scrolled .main-navigation {
 
 header.nav-scrolled .main-navigation .navbar-brand {
   padding: 0px;
+}
+
+header.nav-scrolled .main-navigation .navbar-brand img {
+  max-width: 70%; /* Shrink logo */
+  transition: all 0.3s ease;
 }
 
 header.nav-scrolled .main-navigation .navbar-nav {
@@ -258,6 +263,7 @@ header.nav-scrolled .main-navigation .navbar-nav .nav-item .nav-link {
   padding: 8px 15px;
   font-weight: 300;
   letter-spacing: 0.5px;
+  font-size: 12px; /* Smaller font size */
 }
 
 @media (min-width: 576px) {
@@ -361,13 +367,20 @@ button:focus:not(:focus-visible) {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  padding: 170px 0px 270px 0px;
+  padding: 0px;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
   text-align: center;
 }
 
 @media (min-width: 576px) {
   .main-banner {
-    padding: 270px 0px 400px 0px;
+    padding: 0px;
   }
 }
 
@@ -1152,7 +1165,7 @@ span.work-type-badge {
 /* ----- */
 
 .services {
-  margin-top: -85px;
+  margin-top: 0px;
 }
 
 .services .service-item {

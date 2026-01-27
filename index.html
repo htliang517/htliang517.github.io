@@ -2,17 +2,18 @@
 <html lang="en">
 
 <!-- [Headers] -->
+
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8M8D0SS9T6"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-8M8D0SS9T6');
+        gtag('config', 'G-8M8D0SS9T6');
     </script>
-    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -37,6 +38,7 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 </head>
+
 <body>
     <div class="loader">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -68,11 +70,11 @@
             </rect>
         </svg>
     </div>
-    
-    <header id="#top">
+
+    <header id="top">
         <nav class="main-navigation navbar navbar-expand-lg navbar-light">
             <div class="container">
-                <a class="navbar-brand" href="/"><img src="assets/images/logo_removeBG.png" alt=""></a>
+                <a class="navbar-brand" href="#top"><img src="assets/images/logo_removeBG.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -80,19 +82,25 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="/">Home</a>
+                            <a class="nav-link" href="#top">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about">About Me</a>
+                            <a class="nav-link" href="#about">About Me</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="works">Recent Works</a>
+                            <a class="nav-link" href="#education">Education</a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="blog" target="_blank">Technical Blog</a>
-                        </li> -->
                         <li class="nav-item">
-                            <a class="nav-link" href="contact">Contact Me</a>
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#works">Recent Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experiences">Experiences</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact Me</a>
                         </li>
                     </ul>
                 </div>
@@ -121,42 +129,427 @@
                         </div>
 
                         <p>
-                            A creative and reliable student majoring in Autonomy and Robotics at
-                            University of Illinois Urbana-Champaign (UIUC). 
-                            Recieved Bachelor degree in Bio-mechatronics Engineering at National Taiwan University (NTU).
-                            Previoisly work as the research assistant at NTU.
-                            Research focuses on building autonomous navigation system for UAVs to cruise in
-                            greenhouse and IoT devices for cow behavior recognition.
-                            Awarded Best Creativity Award in the 2021 field robot competition and Special Award in Digital Innovative Application Competition.
-                            Seeking for opportunities to utilize the acquired skillsets to further professionalism and
-                            actualize creativity to contribute to the industry.
+                            A robotics engineer specializing in autonomous systems, computer vision, and machine learning.
+                            Master's student in Autonomy and Robotics at University of Illinois Urbana-Champaign. 
+                            Experienced in developing full-stack solutions for autonomous
+                            vehicles,
+                            UAVs, and IoT systems. Published researcher with expertise spanning perception, planning,
+                            and control.
+                            Seeking opportunities to build innovative robotic solutions for real-world challenges.
                         </p>
-                        <div class="white-button">
-                            <a href="about">More About Me</a>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <a href="#scroll_here" class="scroll_down"></a>
-    <div id="scroll_here"></div>
+    <a href="#about" class="scroll_down"></a>
+    <div id="about" class="section-anchor"></div>
 
-    <section class="whats-trending">
-        <div class="container">
+    <!-- [About Section] -->
+    <section class="interior-design">
+        <div class="text-center" style="margin-top: 50px;">
+            <div class="container">
+                <div class="aboutMe-heading">
+                    <h2>About <em>Me</em></h2>
+                </div>
+            </div>
+        </div>
+        <div class="container expanded">
             <div class="row">
-
-                <div class="col-12">
+                <div class="col-lg-3 offset-lg-1">
                     <div class="section-heading">
-                        <h2>Explore and Discover More<br><em>Highlight Works</em></h2>
+                        <h2>Hi There! Welcome! <br><em>I'm Hua-Ta!</em></h2>
+                    </div>
+                    <br>
+                    <div class="left-image">
+                        <img src="assets/images/my_photo.png" alt="">
                     </div>
                 </div>
+                <div class="col-lg-7 align-self-center">
+                    <div class="right-content">
+                        <p>
+                            Hua-Ta (Eric) Liang is a robotics engineer specializing in autonomous systems, computer
+                            vision, and machine learning. Completing his Master's in Autonomy and Robotics at the
+                            University of Illinois Urbana-Champaign, he has developed full-stack
+                            solutions for autonomous vehicles, UAVs, unmanned surface vessels, and IoT systems.
+                            <br><br>
+                            His expertise spans the complete autonomy pipeline: perception (YOLO, Visual SLAM, sensor
+                            fusion), path planning (A*, trajectory optimization), and control (PID, Pure Pursuit,
+                            reinforcement learning). Recent projects include vision-based autonomous driving for
+                            full-scale vehicles, a sonar-mapping system for unmanned surface vessels and
+                            a DDQN agent for urban navigation in CARLA.
+                            <br><br>
+                            As a research assistant at National Taiwan University, Hua-Ta built an end-to-end IoT
+                            solution
+                            for dairy cattle health monitoring, integrating IMU sensors, XGBoost models, and PostgreSQL
+                            databases. This work resulted in publications in <i>Smart Agricultural Technology</i> and
+                            the 2023
+                            ASABE International Conference. His undergraduate thesis on building a GPS-denied UAV
+                            navigation earned a fellowship from Taiwan's Ministry of Science and Technology.
+                            <br><br>
+                            Hua-Ta's work demonstrates strong systems integration skills, having successfully deployed
+                            autonomous solutions across diverse platforms from embedded systems to full-scale vehicles.
+                            He is actively seeking opportunities in robotics and autonomous systems where he can
+                            contribute to building reliable, innovative solutions that tackle real-world challenges.
+                            <br><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <div class="service-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="62"
+                                width="62" viewBox="0 0 640 512">
+                                <path class="icon"
+                                    d="M320 0c17.7 0 32 14.3 32 32V96H472c39.8 0 72 32.2 72 72V440c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72H288V32c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H208zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H304zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H400zM264 256a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224H64V416H48c-26.5 0-48-21.5-48-48V272c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H576V224h16z" />
+                            </svg>
+                            <h4>Robotics</h4>
+                            <span class="badge rounded-pill bg-danger">Area of Interest #1</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <div class="service-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="62"
+                                width="62" viewBox="0 0 512 512">
+                                <path class="icon"
+                                    d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V280h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V176h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H280V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H176V24zM160 128H352c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160V352H352V160z" />
+                            </svg>
+                            <h4>Machine Learning</h4>
+                            <span class="badge rounded-pill bg-warning text-black">Area of Interest #2</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <div class="service-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="62"
+                                width="62" viewBox="0 0 640 512">
+                                <path class="icon"
+                                    d="M256 64H384v64H256V64zM240 0c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h48v32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96v32H80c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H240c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H192V288H448v32H400c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H560c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H512V288h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V192h48c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H240zM96 448V384H224v64H96zm320-64H544v64H416V384z" />
+                            </svg>
+                            <h4>Internet of Things</h4>
+                            <span class="badge rounded-pill bg-success">Area of Interest #3</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <div class="service-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="62"
+                                width="62" viewBox="0 0 512 512">
+                                <path class="icon"
+                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zm-312 8v64c0 13.3 10.7 24 24 24s24-10.7 24-24l0-64c0-13.3-10.7-24-24-24s-24 10.7-24 24zm80-96V280c0 13.3 10.7 24 24 24s24-10.7 24-24V120c0-13.3-10.7-24-24-24s-24 10.7-24 24zm80 64v96c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
+                            </svg>
+                            <h4>Data Science</h4>
+                            <span class="badge rounded-pill bg-primary">Area of Interest #4</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- END OF [About Section] -->
+
+    <!-- [Education Section]-->
+    <div id="education" class="section-anchor"></div>
+    <section>
+        <div class="container">
+            <div class="aboutMe-heading">
+                <h2><em>Education</em></h2>
+            </div>
+
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                                    aria-controls="collapseOne">
+                                    <span class="avatar avatar-text rounded-3 me-4 bg-transparent mb-2">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                            height="48" width="48" viewBox="0 0 640 512">
+                                            <path class="icon"
+                                                d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z" />
+                                        </svg>
+
+                                    </span>
+                                    <div class="row flex-fill">
+                                        <div class="col-sm-8">
+                                            <h4 class="h5">
+                                                <span class="badge degree-badge">Master of Engineering</span>
+                                                Autonomy and Robotics
+                                            </h4>
+                                            <p>
+                                                <a class="work-link" href="projects\AutoGEM" target="_blank">
+                                                    <span class="badge border thesis-badge">
+                                                        Highlight Project : <em>"Autonomous Driving System for GEMe2
+                                                            Vehicle (AutoGEM)"</em>
+                                                    </span>
+                                                </a>
+                                                <br>
+                                            </p>
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-success"></span>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h5>University of Illinois<br> Urbana-Champaign (UIUC) <br>Illinois, USA
+                                            </h5>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <p>2024.08 <br>2025.12</p>
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-secondary"></span>
+                                        </div>
+                                    </div>
+
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <h6>Related Courses</h6>
+                                    <ul>
+                                        <li> - Robotics :<br>
+                                            <span class="badge course-badge">Advanced Computational Topics in
+                                                Robotics</span>
+                                            <span class="badge course-badge">Principles of Safe Autonomy</span>
+                                            <span class="badge course-badge">Autonomous Vehicle System
+                                                Engineering</span>
+                                            <!-- <span class="badge course-badge">Computer Vision</span> -->
+                                        </li>
+                                        <br>
+                                        <li>
+                                            - Computer Vision :<br>
+                                            <span class="badge course-badge">Computer Vision</span>
+                                            <span class="badge course-badge">Deep Learning for Computer Vision</span>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            - IoT :<br>
+                                            <span class="badge course-badge">Topics in Internet of Things</span>
+                                            <span class="badge course-badge">Real World Algorithms for IoT and Data
+                                                Science</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row"></div>
+                </div>
+            </div>
+
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    <span class="avatar avatar-text rounded-3 me-4 bg-transparent mb-2">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                            height="48" width="48" viewBox="0 0 640 512">
+                                            <path class="icon"
+                                                d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z" />
+                                        </svg>
+
+                                    </span>
+                                    <div class="row flex-fill">
+                                        <div class="col-sm-8">
+                                            <h4 class="h5">
+                                                <span class="badge degree-badge">Bachelor of Science</span>
+                                                Biomechatronics Engineering
+                                            </h4>
+                                            <p>
+                                                <a class="work-link" href="research\uav_nav" target="_blank">
+                                                    <span class="badge border thesis-badge">
+                                                        Thesis : <em>"Autonomous Navigation Control of Multi-Rotor
+                                                            Unmanned Aerial Vehicle in Greenhouse"</em>
+                                                    </span>
+                                                </a>
+                                            </p>
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-success"></span>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <h5>National Taiwan University (NTU) <br> Taipei, Taiwan</h5>
+                                        </div>
+                                        <div class="col-sm-1">
+                                            <p>2018.09 <br>2022.06</p>
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-secondary"></span>
+                                        </div>
+                                    </div>
+
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <h6>Related Courses</h6>
+                                    <ul>
+                                        <li> - Mechatronics :<br>
+                                            <span class="badge course-badge">Principles and Applications of
+                                                Microcontrollers</span>
+                                            <span class="badge course-badge">Principles and Applications of
+                                                Sensors</span>
+                                            <span class="badge course-badge">Principles and Applications of
+                                                Actuators</span>
+                                            <span class="badge course-badge">Mechatronics and System Design</span>
+                                        </li>
+                                        <li>
+                                            - Robot Control :<br>
+                                            <span class="badge course-badge">Robotics</span>
+                                            <span class="badge course-badge">Dynamics and Control of Robots</span>
+                                            <span class="badge course-badge">Automatic Control</span>
+                                            <span class="badge course-badge">Intelligent Control</span>
+                                        </li>
+                                        <li>
+                                            - Other :<br>
+                                            <span class="badge course-badge">Machine Learning</span>
+                                            <span class="badge course-badge">Engineering Drawing and Computer-aided
+                                                Design</span>
+                                            <span class="badge course-badge">Database Management System – from SQL to
+                                                NoSQL</span>
+                                            <span class="badge course-badge">Web Programming</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Education Section -->
+
+    
+    <!-- RELEVANT SKILL / Certification -->
+    <div id="skills" class="section-anchor"></div>
+    <section>
+        <div class="container">
+            <div class="aboutMe-heading">
+                <h2>Technical <em>Skills</em></h2>
+            </div>
+            <div class="row">
+                <div class="col-md-5 offset-md-1">
+                    <h4 class="skill-title">Programming</h4>
+                    <span class="badge skill-badge-base border">Python</span>
+                    <span class="badge skill-badge-base border">C++ / Embedded C</span>
+                    <span class="badge skill-badge-base border">Java</span>
+                    <span class="badge skill-badge-base border">SQL (PostgreSQL, MySQL)</span>
+                    <span class="badge skill-badge-base border">MATLAB</span>
+                    <span class="badge skill-badge-base border">Bash</span>
+                </div>
+
+                <div class="col-md-5">
+                    <h4 class="skill-title">Robotics Frameworks</h4>
+                    <span class="badge skill-badge-base border">ROS / ROS 2</span>
+                    <span class="badge skill-badge-base border">Gazebo</span>
+                    <span class="badge skill-badge-base border">ArduPilot & PX4</span>
+                    <span class="badge skill-badge-base border">CARLA Simulator</span>
+                    <span class="badge skill-badge-base border">Docker</span>
+                    <span class="badge skill-badge-base border">Git & GitHub</span>
+                </div>
+
+                <div class="w-100 d-none d-md-block" style="height: 20px;"></div>
+
+                <div class="col-md-5 offset-md-1">
+                    <h4 class="skill-title">Machine Learning</h4>
+                    <span class="badge skill-badge-base border">PyTorch</span>
+                    <span class="badge skill-badge-base border">Scikit-learn</span>
+                    <span class="badge skill-badge-base border">XGBoost</span>
+                    <span class="badge skill-badge-base border">Pandas & NumPy</span>
+                    <span class="badge skill-badge-base border">Reinforcement Learning (DDQN)</span>
+                </div>
+
+                <div class="col-md-5">
+                    <h4 class="skill-title">Perception & Navigation</h4>
+                    <span class="badge skill-badge-base border">Computer Vision (OpenCV)</span>
+                    <span class="badge skill-badge-base border">YOLO (v4, v8, YOLOPv2)</span>
+                    <span class="badge skill-badge-base border">DeepSORT</span>
+                    <span class="badge skill-badge-base border">Visual SLAM (RTAB-Map)</span>
+                    <span class="badge skill-badge-base border">LiDAR SLAM (GMapping)</span>
+                    <span class="badge skill-badge-base border">Sensor Fusion</span>
+                </div>
+
+                <div class="w-100 d-none d-md-block" style="height: 20px;"></div>
+
+                <div class="col-md-5 offset-md-1">
+                    <h4 class="skill-title">Control & Planning</h4>
+                    <span class="badge skill-badge-base border">PID Control</span>
+                    <span class="badge skill-badge-base border">Pure Pursuit</span>
+                    <span class="badge skill-badge-base border">Path Planning (A*, move_base)</span>
+                    <span class="badge skill-badge-base border">Trajectory Optimization</span>
+                    <span class="badge skill-badge-base border">State Machines</span>
+                </div>
+
+                <div class="col-md-5">
+                    <h4 class="skill-title">Sensors & Hardware</h4>
+                    <span class="badge skill-badge-base border">ZED2 Stereo Camera</span>
+                    <span class="badge skill-badge-base border">RGB-D Cameras</span>
+                    <span class="badge skill-badge-base border">LiDAR (RpLidar)</span>
+                    <span class="badge skill-badge-base border">Sonar (Ping, Omniscan 450)</span>
+                    <span class="badge skill-badge-base border">Ultrasonic Sensors</span>
+                </div>
+
+                <div class="w-100 d-none d-md-block" style="height: 20px;"></div>
+
+                <div class="col-md-5 offset-md-1">
+                    <h4 class="skill-title">Embedded Systems</h4>
+                    <span class="badge skill-badge-base border">Raspberry Pi</span>
+                    <span class="badge skill-badge-base border">Jetson Nano</span>
+                    <span class="badge skill-badge-base border">Pixhawk / Flight Controllers</span>
+                    <span class="badge skill-badge-base border">Arduino (ATmega328p)</span>
+                    <span class="badge skill-badge-base border">9-axis IMU</span>
+                </div>
+
+                <div class="col-md-5">
+                    <h4 class="skill-title">Development Tools</h4>
+                    <span class="badge skill-badge-base border">Linux (Ubuntu)</span>
+                    <span class="badge skill-badge-base border">SolidWorks (CAD)</span>
+                    <span class="badge skill-badge-base border">Qt</span>
+                    <span class="badge skill-badge-base border">Flask</span>
+                    <span class="badge skill-badge-base border">BlueOS</span>
+                    <span class="badge skill-badge-base border">MongoDB</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END OF RELEVANT SKILL-->
+
+    <!-- [Works Section] -->
+    <div id="works" class="section-anchor"></div>
+    <section class="whats-trending" style="margin-top: 20px;">
+        <div class="container">
+            <div class="aboutMe-heading">
+                <h2>Recent <em>Works</em></h2>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h2>Explore More<br><em>Research Projects</em></h2>
+                    </div>
+                </div>
                 <div class="col-lg-4 col-xs-6">
                     <div class="right-image">
                         <div class="thumb">
-                            <span class="banner_research">Research</span>
+                            <span class="banner_research">ML & IoT</span>
                             <a href="research\cow_imu">
                                 <div class="hover-effect">
                                     <div class="inner-content">
@@ -179,45 +572,11 @@
                                     for Health Monitoring Using Machine Learning</span>
                             </a>
                         </div>
-                        <!-- <h5>An IMU Based Dairy Cow Behavior Recognition System
-                                for Health Monitoring Using Machine Learning </h5> -->
                     </div>
                 </div>
-                
 
 
                 <div class="col-lg-4 col-xs-6">
-                    <div class="right-image">
-                        <div class="thumb">
-                            <span class="banner_project">Project</span>
-                            <a href="projects\AutoGEM">
-                                <div class="hover-effect">
-                                    <div class="inner-content">
-                                        <h4>Autonomous Driving System for GEMe2 Vehicle (AutoGEM)</h4>
-                                        <span>
-                                            This project aims to create a purely
-                                            vision-based autonomous navigation system. The system achieves real-time
-                                            lane following while handling critical scenarios, including stop sign
-                                            detection, pedestrian detection, and navigating road work zones,
-                                            ensuring smooth and reliable performance in diverse real-world
-                                            conditions.
-                                        </span>
-                                        <br><br>
-                                        <span><b>Keywords: </b></span>
-                                        <span class="badge work-badge">Robotics</span>
-                                        <span class="badge work-badge">ROS</span>
-                                        <span class="badge work-badge">YOLO</span>
-                                    </div>
-                                </div>
-                                <img src="assets\images\works\banner_pic\AutoGEM.PNG" alt="AutoGEM">
-                                <span class="banner_title">Autonomous Driving System for GEMe2 (AutoGEM)</span>
-                            </a>
-                        </div>
-                        <!-- <h5>Cow Behavior Recognition System</h5> -->
-                    </div>
-                </div>
-
-                <!-- <div class="col-lg-4 col-xs-6">
                     <div class="right-image">
                         <div class="thumb">
                             <span class="banner_research">Robotics</span>
@@ -237,151 +596,896 @@
                                         <span class="badge work-badge">PX4</span>
                                     </div>
                                 </div>
-                                <img src="assets/images/works/research/uav_nav/drone.jpg" alt="UAV navigation">
+                                <img src="assets\images\works\banner_pic\uav_nav.PNG" alt="UAV navigation">
                                 <span class="banner_title">Autonomous Navigation Control of
                                     Multi-Rotor Unmanned Aerial Vehicle in Greenhouse</span>
                             </a>
                         </div>
-                        <h5>Autonomous Navigation Control of
-                                Multi-Rotor Unmanned Aerial Vehicle in Greenhouse</h5>
-                    </div>
-                </div> -->
-
-                <div class="col-lg-4 col-xs-6">
-                    <div class="right-image">
-                        <div class="thumb">
-                            <span class="banner_project">Project</span>
-                            <a href="projects\BlueBoat">
-                                <div class="hover-effect">
-                                    <div class="inner-content">
-                                        <h4>Beneath the Surface: BlueBoat Underwater Sonar Mapping</h4>
-                                        <span>
-                                            Exploring the unseen world beneath the waves. This project showcases the
-                                            development of a sonar-equipped robotic boat designed to create detailed
-                                            2D maps of underwater terrain and identify hidden dangers, laying the
-                                            groundwork for future autonomous marine systems.
-                                        </span>
-                                        <br><br>
-                                        <span><b>Keywords: </b></span>
-                                        <span class="badge work-badge">Robotics</span>
-                                        <span class="badge work-badge">Sonar</span>
-                                        <span class="badge work-badge">Ardupilot</span>
-                                    </div>
-                                </div>
-                                <img src="assets\images\works\banner_pic\BlueBoat.PNG" alt="BlueBoat">
-                                <span class="banner_title">Beneath the Surface: Underwater Sonar Mapping</span>
-                            </a>
-                        </div>
-                        <!-- <h5>Cow Behavior Recognition System</h5> -->
                     </div>
                 </div>
 
-                <!-- <div class="col-lg-4 col-xs-6">
-                    <div class="right-image">
-                        <div class="thumb">
-                            <span class="banner_project">Project</span>
-                            <a href="projects\MLF-6110">
-                                <div class="hover-effect">
-                                    <div class="inner-content">
-                                        <h4>Mobile Lost and Found (MLF-6110)</h4>
-                                        <span>
-                                            The aim of this project is to develop a mobile platform 
-                                            equipped with an RGB-D camera and lidar to aid people 
-                                            in locating their lost belongings within confined spaces. 
-                                            The system also comes with an intuitive GUI and a command prompt for user to interact with.
-                                        </span>
-                                        <br><br>
-                                        <span><b>Keywords: </b></span>
-                                        <span class="badge work-badge">Robotics</span>
-                                        <span class="badge work-badge">ROS</span>
-                                        <span class="badge work-badge">Lidar-SLAM</span>
-                                    </div>
-                                </div>
-                                <img src="assets\images\works\banner_pic\MLF-6110.PNG" alt="MLF6110">
-                                <span class="banner_title">Mobile Lost and Found (MLF-6110)</span>
-                            </a>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-heading">
+                            <h2>Discover More<br><em>Highlight Works & Projects</em></h2>
                         </div>
                     </div>
-                </div> -->
 
-                <div class="col-lg-12">
-                    <div class="primary-button text-center">
-                        <a href="works">See More Works & Projects</a>
+                    <div class="col-lg-4 col-xs-6">
+                        <div class="right-image">
+                            <div class="thumb">
+                                <span class="banner_project">Project</span>
+                                <a href="projects\AutoGEM">
+                                    <div class="hover-effect">
+                                        <div class="inner-content">
+                                            <h4>Autonomous Driving System for GEMe2 Vehicle (AutoGEM)</h4>
+                                            <span>
+                                                This project aims to create a purely
+                                                vision-based autonomous navigation system. The system achieves real-time
+                                                lane following while handling critical scenarios, including stop sign
+                                                detection, pedestrian detection, and navigating road work zones,
+                                                ensuring smooth and reliable performance in diverse real-world
+                                                conditions.
+                                            </span>
+                                            <br><br>
+                                            <span><b>Keywords: </b></span>
+                                            <span class="badge work-badge">Robotics</span>
+                                            <span class="badge work-badge">ROS</span>
+                                            <span class="badge work-badge">YOLO</span>
+                                        </div>
+                                    </div>
+                                    <img src="assets\images\works\banner_pic\AutoGEM.PNG" alt="AutoGEM">
+                                    <span class="banner_title">Autonomous Driving System for GEMe2 (AutoGEM)</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
+                    <div class="col-lg-4 col-xs-6">
+                        <div class="right-image">
+                            <div class="thumb">
+                                <span class="banner_project">Project</span>
+                                <a href="projects\BlueBoat">
+                                    <div class="hover-effect">
+                                        <div class="inner-content">
+                                            <h4>Beneath the Surface: BlueBoat Underwater Sonar Mapping</h4>
+                                            <span>
+                                                Exploring the unseen world beneath the waves. This project showcases the
+                                                development of a sonar-equipped robotic boat designed to create detailed
+                                                2D maps of underwater terrain and identify hidden dangers, laying the
+                                                groundwork for future autonomous marine systems.
+                                            </span>
+                                            <br><br>
+                                            <span><b>Keywords: </b></span>
+                                            <span class="badge work-badge">Robotics</span>
+                                            <span class="badge work-badge">Sonar</span>
+                                            <span class="badge work-badge">Ardupilot</span>
+                                        </div>
+                                    </div>
+                                    <img src="assets\images\works\banner_pic\BlueBoat.PNG" alt="BlueBoat">
+                                    <span class="banner_title">BlueBoat Underwater Sonar Mapping</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-xs-6">
+                        <div class="right-image">
+                            <div class="thumb">
+                                <span class="banner_project">Project</span>
+                                <a href="projects\MLF-6110">
+                                    <div class="hover-effect">
+                                        <div class="inner-content">
+                                            <h4>Mobile Lost and Found (MLF-6110)</h4>
+                                            <span>
+                                                The aim of this project is to develop a mobile platform
+                                                equipped with an RGB-D camera and lidar to aid people
+                                                in locating their lost belongings within confined spaces.
+                                                The system also comes with an intuitive GUI and a command prompt for
+                                                user to interact with.
+                                            </span>
+                                            <br><br>
+                                            <span><b>Keywords: </b></span>
+                                            <span class="badge work-badge">Robotics</span>
+                                            <span class="badge work-badge">ROS</span>
+                                            <span class="badge work-badge">Lidar-SLAM</span>
+                                        </div>
+                                    </div>
+                                    <img src="assets\images\works\banner_pic\MLF-6110.PNG" alt="MLF6110">
+                                    <span class="banner_title">Mobile Lost and Found (MLF-6110)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-xs-6">
+                        <div class="right-image">
+                            <div class="thumb">
+                                <span class="banner_project">Project</span>
+                                <a href="projects\CARLA_RL">
+                                    <div class="hover-effect">
+                                        <div class="inner-content">
+                                            <h4>Reinforcement Learning for Autonomous Vehicles with CARLA Simulator</h4>
+                                            <span>
+                                                This project develops a reinforcement learning agent to control an
+                                                autonomous vehicle within the CARLA simulator. Using a Double Deep
+                                                Q-Network (DDQN) enhanced with a CNN for visual processing and an LSTM
+                                                for understanding motion, the agent was trained to navigate complex
+                                                urban environments.
+                                            </span>
+                                            <br><br>
+                                            <span><b>Keywords: </b></span>
+                                            <span class="badge work-badge">Robotics</span>
+                                            <span class="badge work-badge">RL</span>
+                                            <span class="badge work-badge">CARLA</span>
+                                        </div>
+                                    </div>
+                                    <img src="assets\images\works\banner_pic\CARLA_RL.PNG" alt="CARLA RL">
+                                    <span class="banner_title">Reinforcement Learning for AVs with CARLA
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-xs-6">
+                        <div class="right-image">
+                            <div class="thumb">
+                                <span class="banner_project">Project</span>
+                                <a href="projects\AutoSlalom">
+                                    <div class="hover-effect">
+                                        <div class="inner-content">
+                                            <h4>Autonomous Slalom Driving with GEMe4 vehicle</h4>
+                                            <span>
+                                                This project is a complete software stack for autonomous racing designed
+                                                to exceed human driver speeds on courses. The system uses
+                                                advanced planning to generate optimal routes, a velocity profiler
+                                                to push the vehicle's physical limits, and a custom launch control
+                                                module to maximize acceleration, resulting in significant performance
+                                                gains over standard controllers.
+                                            </span>
+                                            <br><br>
+                                            <span><b>Keywords: </b></span>
+                                            <span class="badge work-badge">Robotics</span>
+                                            <span class="badge work-badge">Self Driving</span>
+                                        </div>
+                                    </div>
+                                    <img src="assets\images\works\banner_pic\AutoSlalom.PNG" alt="AutoSlalom">
+                                    <span class="banner_title">Autonomous Slalom Driving with GEMe4 vehicle</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-xs-6">
+                        <div class="right-image">
+                            <div class="thumb">
+                                <span class="banner_project">Project</span>
+                                <a href="projects\MobileSensing">
+                                    <div class="hover-effect">
+                                        <div class="inner-content">
+                                            <h4>Mobile Sensing for Smart Building Environments</h4>
+                                            <span>
+                                                This project presents an innovative system for monitoring indoor
+                                                environmental quality. By combining data from a mobile robot and a
+                                                network of fixed sensors, it provides a real-time assessment
+                                                of environmental conditions. The system detects and
+                                                visualizes anomalies, such as localized heat sources, through an
+                                                intuitive dashboard with dynamic heatmaps.
+                                            </span>
+                                            <br><br>
+                                            <span><b>Keywords: </b></span>
+                                            <span class="badge work-badge">IoT</span>
+                                            <span class="badge work-badge">Sensors</span>
+                                            <span class="badge work-badge">Server</span>
+                                        </div>
+                                    </div>
+                                    <img src="assets\images\works\banner_pic\MobileSensing.PNG" alt="MobileSensing">
+                                    <span class="banner_title">Mobile Sensing for Smart Building Environments</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-xs-6">
+                        <div class="right-image">
+                            <div class="thumb">
+                                <span class="banner_project">Project</span>
+                                <a href="projects\AutoRpi">
+                                    <div class="hover-effect">
+                                        <div class="inner-content">
+                                            <h4>Autonomous Raspberry Pi Car</h4>
+                                            <span>
+                                                This project presents a complete autonomous navigation system
+                                                implemented on a Raspberry Pi-powered carand
+                                                demonstrates how an embeded computer with limited computation power and
+                                                sensors
+                                                can be leveraged to create a miniature self-driving vehicle that can
+                                                detect obstacles, recognize
+                                                stop signs, dynamically remap its environment, and plot alternative
+                                                routes to reach target
+                                                destinations.
+                                            </span>
+                                            <br><br>
+                                            <span><b>Keywords: </b></span>
+                                            <span class="badge work-badge">Robotics</span>
+                                            <span class="badge work-badge">Self-Driving</span>
+                                        </div>
+                                    </div>
+                                    <img src="assets\images\works\banner_pic\AutoRpi.PNG" alt="AutoRpi">
+                                    <span class="banner_title">Autonomous Raspberry Pi Car</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 col-xs-6">
+                        <div class="right-image">
+                            <div class="thumb">
+                                <span class="banner_project">Project</span>
+                                <a href="projects\RpiRemoteControl">
+                                    <div class="hover-effect">
+                                        <div class="inner-content">
+                                            <h4>Raspberry Pi Remote Control Car</h4>
+                                            <span>
+                                                This project implements a remote control system for a Raspberry
+                                                Pi-powered car to demonstrate edge networking principles. The system
+                                                supports real-time vehicle operation and monitoring through various user
+                                                interfaces, including web, desktop, and mobile applications.
+                                            </span>
+                                            <br><br>
+                                            <span><b>Keywords: </b></span>
+                                            <span class="badge work-badge">Robotics</span>
+                                            <span class="badge work-badge">Remote Control</span>
+                                        </div>
+                                    </div>
+                                    <img src="assets\images\works\banner_pic\RpiRemote.PNG" alt="RpiRemoteControl">
+                                    <span class="banner_title">Raspberry Pi Remote Control Car</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 col-xs-6">
+                        <div class="right-image">
+                            <div class="thumb">
+                                <span class="banner_project">Project</span>
+                                <a href="projects\line_tracker&maze_solver">
+                                    <div class="hover-effect">
+                                        <div class="inner-content">
+                                            <h4>Line Tracker & Maze Solver</h4>
+                                            <span>
+                                                This project serves as the term project for the course "Principles and
+                                                Applications of Microcontrollers".
+                                                The primary objective is to apply and reinforce the knowledge
+                                                and skills acquired in implementing AVR microcontrollers during the
+                                                course.
+                                                The project encompasses two main stages: the line-tracker and the
+                                                maze-solver.
+                                            </span>
+                                            <br><br>
+                                            <span><b>Keywords: </b></span>
+                                            <span class="badge work-badge">Robotics</span>
+                                            <span class="badge work-badge">Microcontroller</span>
+                                        </div>
+                                    </div>
+                                    <img src="assets\images\works\banner_pic\MCU.PNG" alt="">
+                                    <span class="banner_title">Line Tracker & Maze Solver</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 col-xs-6">
+                        <div class="right-image">
+                            <div class="thumb">
+                                <span class="banner_project">Project</span>
+                                <a href="projects\LabMS">
+                                    <div class="hover-effect">
+                                        <div class="inner-content">
+                                            <h4>Laboratory Management System</h4>
+                                            <span>
+                                                This project is a simple web application that enable users to do the
+                                                following things:
+                                                <ol>
+                                                    <li>Borrow items from the lab.</li>
+                                                    <li>Return items from the lab.</li>
+                                                    <li>Reimburse expense. </li>
+                                                </ol>
+                                            </span>
+                                            <br><br>
+                                            <span><b>Keywords: </b></span>
+                                            <span class="badge work-badge">Web App</span>
+                                            <span class="badge work-badge">Java</span>
+                                            <span class="badge work-badge">Tomcat</span>
+                                        </div>
+                                    </div>
+                                    <img src="assets\images\works\banner_pic\LabMS.PNG" alt="">
+                                    <span class="banner_title">Laboratory Management System (LabMS)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 
-    <section class="explore-work" id="explore">
+    <section class="explore-item">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading">
-                        <h2>Check Out Whats New<br><em>Technical Blog</em></h2>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="left-content">
-                        <p>
-                            A technical blog used for sharing some of the cool things, new tools and basic knowledge
-                            that I am currently learning. Since I like coding and programming (especially for robots),
-                            the main content of the blog will be mainly introducing "software development".
-                        </p>
-                        <p>
-                            Contents of this blog mainly focus on:
-                        <ol>
-                            <li>
-                                Robot Operating System (ROS)
-                            </li>
-                            <li>
-                                Machine Learning (ML)
-                            </li>
-                            <li>
-                                Basic Image Processing
-                            </li>
-                            <li>
-                                Useful Tools Sharing
-                            </li>
-                            <li>
-                                Other Knowledge of Software Development
-                            </li>
-                        </ol>
-                        </p>
-                        <p>
-                            Hoping that this blog can help those who are also learning the same things!
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="right-content">
-                        <img src="assets/images/wordcloud.png" alt="Welcome to my blog!">
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="primary-button text-center">
-                        <a href="blog">Discover More</a>
+            <div class="col-lg-12">
+                <div class="projects-pagination">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="right-pagination">
+                                <div class="float-end left-content">
+                                    <a href="https://github.com/htliang517" target="_blank">
+                                        <h6>
+                                            <u>For other mini projects, please visit my GitHub.</u>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi bi-box-arrow-in-right"
+                                                viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                                            </svg>
+                                        </h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    -->
+    <!-- END OF [Works Section] -->
+
+    <!-- Customed Section / Source : https://www.bootdey.com/snippets/view/bs4-my-experience-timeline#html -->
+    <div id="experiences" class="section-anchor"></div>
+    <section class="interior-design">
+        <div class="container">
+            <div class="aboutMe-heading">
+                <h2><em>Work</em> Experience</h2>
+            </div>
+            <div class="main-timeline">
+
+                <div class="timeline">
+                    <div class="icon"></div>
+                    <div class="date-content">
+                        <div class="date-outer">
+                            <span class="date">
+                                <span class="month">2023.12 ~</span>
+                                <span class="year"><em>2024</em>.08</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h5 class="title">Biophotonics and Bioimaging Laboratory</h5>
+                        <p class="sub-title"><em>Research</em> Assistant</p>
+                        <p class="location-badge">
+                            <span class="badge bg-light text-dark rounded-pill border border-dark">National Taiwan
+                                University, Taipei, Taiwan</span>
+                        </p>
+                        <ul class="description">
+                            <li>Published journal paper in "Smart Agricultural Technology" -
+                                “<a href="https://doi.org/10.1016/j.atech.2024.100539" target="_blank"><span
+                                        class="inline-link">An IMU-based machine learning approach for daily behavior
+                                        pattern recognition in dairy cows</span></a>”.</li>
+                            <li>Redesign laboratory website with WordPress and Xampp and help maintain servers of the
+                                laboratory.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="icon"></div>
+                    <div class="date-content">
+                        <div class="date-outer">
+                            <span class="date">
+                                <span class="month">2023.08 ~</span>
+                                <span class="year"><em>2023</em>.11</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h5 class="title">Mandatory Military Service</h5>
+                        <p class="sub-title">Military <em>Police</em> (M.P.)</p>
+                        <p class="location-badge">
+                            <span class="badge bg-light text-dark rounded-pill border border-dark">Military Police
+                                Training Center, New Taipei, Taiwan</span>
+                        </p>
+                        <ul class="description">
+                            <li>Learned how to collaborate and interact with people from diverse backgrounds and social
+                                stratification.
+                            <li>Cultivated self-confidence, discipline, obedience and fearlessness.</li>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="icon"></div>
+                    <div class="date-content">
+                        <div class="date-outer">
+                            <span class="date">
+                                <span class="month">2022.07 ~</span>
+                                <span class="year"><em>2023</em>.07</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h5 class="title">Biophotonics and Bioimaging Laboratory</h5>
+                        <p class="sub-title"><em>Research</em> Assistant</p>
+                        <p class="location-badge">
+                            <span class="badge bg-light text-dark rounded-pill border border-dark">National Taiwan
+                                University, Taipei, Taiwan</span>
+                        </p>
+                        <ul class="description">
+                            <li>Focusing on building various IoT devices along with machine learning, servers and
+                                databases.</li>
+                            <li>Attended 2023 ASABE International Conference -
+                                “<a href="http://dx.doi.org/10.13031/aim.202300400" target="_blank"><span
+                                        class="inline-link">An IMU based
+                                        dairy cow behavior recognition system for health monitoring using machine
+                                        learning</span></a>”.</li>
+                            <li>Help maintain servers and internet of the laboratory.</li>
+                            <li>Provided and designed training courses for new lab members.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="icon"></div>
+                    <div class="date-content">
+                        <div class="date-outer">
+                            <span class="date">
+                                <span class="month">2022.02 ~</span>
+                                <span class="year"><em>2022</em>.07</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h5 class="title">Principles and Applications of Microcontrollers</h5>
+                        <p class="sub-title"><em>Teaching</em> Assistant</p>
+                        <p class="location-badge">
+                            <span class="badge bg-light text-dark rounded-pill border border-dark">National Taiwan
+                                University,
+                                Taipei, Taiwan
+                            </span>
+                        </p>
+                        <ul class="description">
+                            <li>
+                                Redesigned the robot car used in class and provided instruction manual to help students
+                                assemble their car and write assembly program to operate the robot car.
+                            </li>
+                            <li>
+                                Contributed to curriculum design, held an in class competitions and graded essays.
+                            </li>
+                            <li>
+                                Helped 50 undergraduate students in class to solve problems of their Arduino code, C++
+                                code, assembly code and hardware issues.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="icon"></div>
+                    <div class="date-content">
+                        <div class="date-outer">
+                            <span class="date">
+                                <span class="month">2020.07 ~</span>
+                                <span class="year"><em>2022</em>.07</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h5 class="title">Biophotonics and Bioimaging Laboratory</h5>
+                        <p class="sub-title"><em>Undergraduate</em> Researcher</p>
+                        <p class="location-badge">
+                            <span class="badge bg-light text-dark rounded-pill border border-dark">National Taiwan
+                                University,
+                                Taipei, Taiwan
+                            </span>
+                        </p>
+                        <ul class="description">
+                            <li>
+                                Bachelor thesis: "Autonomous Navigation Control of Multi-Rotor Unmanned Aerial Vehicle
+                                in
+                                Greenhouse"
+                            </li>
+                            <li>
+                                Received the fellowship for undergraduate research from the Ministry of Science and
+                                Technology
+                                (MOST).
+                            </li>
+                            <li>
+                                Research focuses on the implementation of visual SLAM algorithm and sensor fusion by
+                                using
+                                ROS. Image processing and machine learning (CNN) are also implemented in the research.
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="icon"></div>
+                    <div class="date-content">
+                        <div class="date-outer">
+                            <span class="date">
+                                <span class="month">2019.07 ~</span>
+                                <span class="year"><em>2019</em>.12</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h5 class="title">Carnegie Training - Youth & College Program</h5>
+                        <p class="sub-title"><em>Teaching</em> Assistant</p>
+                        <p class="location-badge">
+                            <span class="badge bg-light text-dark rounded-pill border border-dark">Dale Carnegie Taiwan,
+                                Taipei, Taiwan
+                            </span>
+                        </p>
+                        <ul class="description">
+                            <li>
+                                Helped plan lecture schedule and provided case study topics for students to discuss.
+
+                            </li>
+                            <li>
+                                Led approximately 60 students, composed of different ages(13~20) to improve their
+                                leadership, team work and communication skills.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END OF Customed-->
+
+    <!-- EXTRA     -->
+    <section>
+        <div class="container">
+            <div class="aboutMe-heading">
+                <h2><em>Extracurricular </em>Activities</h2>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseExtra1" aria-expanded="false"
+                                    aria-controls="collapseExtra1">
+                                    <span class="avatar avatar-text rounded-3 me-4 bg-transparent mb-2">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                            height="48" width="48" viewBox="0 0 576 512">
+                                            <path class="icon"
+                                                d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z" />
+                                        </svg>
+
+                                    </span>
+                                    <div class="row flex-fill">
+                                        <div class="col-sm-12">
+                                            <h4 class="h5">Digital Innovative Application Competition - Special Award
+                                                (4th & 5th
+                                                place)</h4>
+                                            <span class="badge bg-secondary">2022.06 ~ 2022.10</span>
+                                            <span class="badge bg-success">Taipei, Taiwan</span>
+                                            <span class="badge bg-danger">Team Member</span>
+                                            <!-- <span class="badge bg-warning text-dark">Prize : NT 50,000</span> -->
+                                        </div>
+                                        <!-- <div class="col-sm-6 py-2">
+                                            <h4></h4>
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-secondary"></span>
+                                        </div> -->
+                                    </div>
+
+                                </button>
+                            </h2>
+                            <div id="collapseExtra1" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <h6>Contribution:</h6>
+                                    <ul>
+                                        <li>
+                                            > Trained and determined the machine learning model used during the model
+                                            training stage leading us to successfully get into the finals.
+                                        </li>
+                                        <li>
+                                            > Provided practical ideas and domain knowledge for proposal writing and
+                                            system design.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row"></div>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseExtra2" aria-expanded="false"
+                                    aria-controls="collapseExtra2">
+                                    <span class="avatar avatar-text rounded-3 me-4 bg-transparent mb-2">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                            height="48" width="48" viewBox="0 0 576 512">
+                                            <path class="icon"
+                                                d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z" />
+                                        </svg>
+
+                                    </span>
+                                    <div class="row flex-fill">
+                                        <div class="col-sm-12">
+                                            <h4 class="h5">Field Robot Competition - Best Creative Award</h4>
+                                            <span class="badge bg-secondary">2021.05 ~ 2021.10</span>
+                                            <span class="badge bg-success">Pingtung, Taiwan</span>
+                                            <span class="badge bg-danger">Team Captian</span>
+                                            <!-- <span class="badge bg-warning">Prize : NT 500</span> -->
+                                        </div>
+                                        <!-- <div class="col-sm-7 py-2">
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-secondary"></span>
+                                        </div> -->
+                                    </div>
+
+                                </button>
+                            </h2>
+                            <div id="collapseExtra2" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <h6>Contribution:</h6>
+                                    <ul>
+                                        <li>
+                                            > Designed the algorithm applied in the competition which let us win the
+                                            best
+                                            creative award.
+                                        </li>
+                                        <li>
+                                            > Assigned work to group members and planned work schedule for the whole
+                                            team.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row"></div>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseExtra3" aria-expanded="false"
+                                    aria-controls="collapseExtra3">
+                                    <span class="avatar avatar-text rounded-3 me-4 bg-transparent mb-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                            height="48" width="48" viewBox="0 0 576 512">
+                                            <path class="icon"
+                                                d="M544 248v3.3l69.7-69.7c21.9-21.9 21.9-57.3 0-79.2L535.6 24.4c-21.9-21.9-57.3-21.9-79.2 0L416.3 64.5c-2.7-.3-5.5-.5-8.3-.5H296c-37.1 0-67.6 28-71.6 64H224V248c0 22.1 17.9 40 40 40s40-17.9 40-40V176c0 0 0-.1 0-.1V160l16 0 136 0c0 0 0 0 .1 0H464c44.2 0 80 35.8 80 80v8zM336 192v56c0 39.8-32.2 72-72 72s-72-32.2-72-72V129.4c-35.9 6.2-65.8 32.3-76 68.2L99.5 255.2 26.3 328.4c-21.9 21.9-21.9 57.3 0 79.2l78.1 78.1c21.9 21.9 57.3 21.9 79.2 0l37.7-37.7c.9 0 1.8 .1 2.7 .1H384c26.5 0 48-21.5 48-48c0-5.6-1-11-2.7-16H432c26.5 0 48-21.5 48-48c0-12.8-5-24.4-13.2-33c25.7-5 45.1-27.6 45.2-54.8v-.4c-.1-30.8-25.1-55.8-56-55.8c0 0 0 0 0 0l-120 0z" />
+                                        </svg>
+                                    </span>
+                                    <div class="row flex-fill">
+                                        <div class="col-sm-12">
+                                            <h4 class="h5">International Companions for Learning (ICL)</h4>
+                                            <span class="badge bg-secondary">2019.07 ~ 2020.06</span>
+                                            <span class="badge bg-success">Taipei & Hualien & Miaoli, Taiwan</span>
+                                            <span class="badge bg-danger">Volunteer</span>
+                                        </div>
+                                        <!-- <div class="col-sm-7 py-2">
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-secondary"></span>
+                                        </div> -->
+                                    </div>
+
+                                </button>
+                            </h2>
+                            <div id="collapseExtra3" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <h6>Contribution:</h6>
+                                    <ul>
+                                        <li>
+                                            > Weekly skype with students in rural area together with international
+                                            students.
+                                        </li>
+                                        <li>
+                                            > Being the communication bridge between students in rural area and
+                                            international students.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row"></div>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseExtra4" aria-expanded="false"
+                                    aria-controls="collapseExtra4">
+                                    <span class="avatar avatar-text rounded-3 me-4 bg-transparent mb-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                            height="48" width="48" viewBox="0 0 576 512">
+                                            <path class="icon"
+                                                d="M544 248v3.3l69.7-69.7c21.9-21.9 21.9-57.3 0-79.2L535.6 24.4c-21.9-21.9-57.3-21.9-79.2 0L416.3 64.5c-2.7-.3-5.5-.5-8.3-.5H296c-37.1 0-67.6 28-71.6 64H224V248c0 22.1 17.9 40 40 40s40-17.9 40-40V176c0 0 0-.1 0-.1V160l16 0 136 0c0 0 0 0 .1 0H464c44.2 0 80 35.8 80 80v8zM336 192v56c0 39.8-32.2 72-72 72s-72-32.2-72-72V129.4c-35.9 6.2-65.8 32.3-76 68.2L99.5 255.2 26.3 328.4c-21.9 21.9-21.9 57.3 0 79.2l78.1 78.1c21.9 21.9 57.3 21.9 79.2 0l37.7-37.7c.9 0 1.8 .1 2.7 .1H384c26.5 0 48-21.5 48-48c0-5.6-1-11-2.7-16H432c26.5 0 48-21.5 48-48c0-12.8-5-24.4-13.2-33c25.7-5 45.1-27.6 45.2-54.8v-.4c-.1-30.8-25.1-55.8-56-55.8c0 0 0 0 0 0l-120 0z" />
+                                        </svg>
+                                    </span>
+                                    <div class="row flex-fill">
+                                        <div class="col-sm-12">
+                                            <h4 class="h5">Orientation Camp & High Shcool Summer Camp of NTU
+                                                Biomechatronics Engineering</h4>
+                                            <span class="badge bg-secondary">2019.07-08 & 2020.08-09</span>
+                                            <span class="badge bg-success">Taipei, Taiwan</span>
+                                            <span class="badge bg-danger">Volunteer</span>
+                                        </div>
+                                        <!-- <div class="col-sm-7 py-2">
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-secondary"></span>
+                                            <span class="badge bg-secondary"></span>
+                                        </div> -->
+                                    </div>
+
+                                </button>
+                            </h2>
+                            <div id="collapseExtra4" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <h6>Contribution:</h6>
+                                    <ul>
+                                        <li>
+                                            > Played in different roles: Counselor, Event Coordinator, Photographer.
+                                        </li>
+                                        <li>
+                                            > Participated in multiple position of the camp which trained me into a good
+                                            communicator.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row"> </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END OF EXTRA -->
 
 
-    <!--  [Footer] -->
+    <!-- [Contact Section] -->
+    <div id="contact" class="section-anchor"></div>
+    <section class="contact-us-page" style="margin-top: 60px;">
+        <div class="container">
+            <div class="text-center aboutMe-heading mt-5 mb-4">
+                <h2><em>Contact</em> Me</h2>
+            </div>
+            <div class="col-lg-12">
+                <div class="contact-page-form">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="right-info">
+                                <ul>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6 col-sm-12">
+                                            <li>
+                                                <a href="mailto:htliang517@gmail.com" target="_blank">
+                                                    <div class="icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            enable-background="new 0 0 24 24" width="48" height="48"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                                                        </svg>
+                                                    </div>
+                                                    <h6>Email</h6>
+                                                    <span>Contact me through Email
+                                                        :<br><u>htliang517@gmail.com</u></span>
+                                                </a>
+                                            </li>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-sm-12">
+                                            <li>
+                                                <a href="https://www.linkedin.com/in/htliang517" target="_blank">
+                                                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            enable-background="new 0 0 24 24" width="48" height="48"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                                        </svg></div>
+                                                    <h6>Linkedin</h6>
+                                                    <span>Feel free to build connection with me through Linkedin.</span>
+                                                </a>
+                                            </li>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6 col-sm-12">
+                                            <li>
+                                                <a href="https://github.com/htliang517" target="_blank">
+                                                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                                            enable-background="new 0 0 24 24" width="48" height="48"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+                                                            </path>
+                                                        </svg>
+                                                    </div>
+                                                    <h6>Github</h6>
+                                                    <span>Visit my GitHub to see all my projects and works.</span>
+                                                </a>
+                                            </li>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6 col-sm-12">
+                                            <li>
+                                                <a href="https://orcid.org/0009-0007-1946-8008" target="_blank">
+                                                    <div class="icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            enable-background="new 0 0 24 24" height="48" width="48"
+                                                            viewBox="0 0 512 512">
+                                                            <path fill="#ffffff"
+                                                                d="M294.8 188.2h-45.9V342h47.5c67.6 0 83.1-51.3 83.1-76.9 0-41.6-26.5-76.9-84.7-76.9zM256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-80.8 360.8h-29.8v-207.5h29.8zm-14.9-231.1a19.6 19.6 0 1 1 19.6-19.6 19.6 19.6 0 0 1 -19.6 19.6zM300 369h-81V161.3h80.6c76.7 0 110.4 54.8 110.4 103.9C410 318.4 368.4 369 300 369z" />
+                                                        </svg>
+                                                    </div>
+                                                    <h6>ORCID</h6>
+                                                    <span>Check out my ORCID to discover full papers.</span>
+                                                </a>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END OF [Contact Section] -->
+
     <section class="call-to-action">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <h2><em>Want To Know More About Me ?</em></h2>
-                </div>
-                <div class="col-lg-4">
-                    <div class="white-button">
-                        <a href="contact">Contact Me Now</a>
-                    </div>
+                    <h2><em>Thanks For Visiting ! Have A Nice Day !</em></h2>
                 </div>
             </div>
         </div>
@@ -398,16 +1502,23 @@
                     </div>
                 </div>
 
-                <div class="col-md-7">
-                    <h4>About Me</h4>
-                    <p>
-                        Majoring in Autonomy and Robotics at University of Illinois Urbana-Champaign.
-                        Recieved Bachelor degree in Bio-mechatronics Engineering at National Taiwan University.
-                        Interseted in coding  and building autonomus robots. Hobbies are photography and hiking.
-                        Seeking for opportunities to utilize the acquired skill sets 
-                        to contribute to the robot or software development industry.
-                    </p>
-                </div>
+                                <div class="col-md-7">
+
+                                    <h4>About Me</h4>
+
+                                    <p>
+
+                                        Master's in Autonomy and Robotics at University of Illinois Urbana-Champaign. 
+
+                                        B.S. in Biomechatronics Engineering from National Taiwan University. 
+
+                                        Passionate about building autonomous systems and computer vision solutions. 
+
+                                        Enjoys photography and hiking. Seeking robotics and software development opportunities.
+
+                                    </p>
+
+                                </div>
                 <div class="col-md-2">
                     <h4>Contact Me</h4>
                     <div class="follow-us">
@@ -454,7 +1565,7 @@
                 <div class="sub-footer">
                     <div class="row">
                         <div class="col-lg-6">
-                            <p>Copyright © 2025. Liang, Hua-Ta (Eric). All Rights Reserved. </p>
+                            <p>Copyright © Liang, Hua-Ta (Eric). All Rights Reserved. </p>
                         </div>
                         <div class="col-lg-6">
                             <a href="#top" class="scroll-to-top">
@@ -494,6 +1605,37 @@
             $("html, body").animate({ scrollTop: 0 }, "slow");
             return false;
         });
+
+        // Scroll Spy for Active Link Highlighting
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".section-anchor, header[id]");
+            const navLi = document.querySelectorAll(".navbar-nav .nav-item .nav-link");
+
+            window.addEventListener("scroll", () => {
+                let current = "";
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    // Offset of 150px to trigger active state a bit before the section hits the very top
+                    if (pageYOffset >= (sectionTop - 150)) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                // Handle the case where we are at the very top
+                if (window.scrollY < 100) {
+                    current = "top"; // Corresponds to the ID of the header
+                }
+
+                navLi.forEach((li) => {
+                    li.classList.remove("active");
+                    // Check if the link href matches the current section ID
+                    // The hrefs are like "#about", so we check if href includes the ID
+                    if (current && li.getAttribute("href").includes(current)) {
+                        li.classList.add("active");
+                    }
+                });
+            });
+        });
     </script>
 
     <script src="assets\js\three.r134.min.js"></script>
@@ -516,15 +1658,16 @@
         })
     </script>
 
-      <script>
-    function scrollToSection(event) {
-      event.preventDefault();
-      var targetOffset = $('#scroll-here').offset().top;
-      var extraOffset = 0;
-      $('html, body').animate({
-        scrollTop: targetOffset + extraOffset
-      }, 0);
-    }
-  </script>
+    <script>
+        function scrollToSection(event) {
+            event.preventDefault();
+            var targetOffset = $("#scroll-here").offset().top;
+            var extraOffset = 0;
+            $("html, body").animate({
+                scrollTop: targetOffset + extraOffset
+            }, 0);
+        }
+    </script>
 </body>
+
 </html>
